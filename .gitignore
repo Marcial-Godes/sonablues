@@ -1,0 +1,15 @@
+assets/external/
+*.py[cod]
+__pycache__/
+.states
+*.db
+.web
+.venv
+__pycache__
+*.pyc
+.reflex
+.env
+sonablues.db
+reflex.db
+.web/
+.venv/

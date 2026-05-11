@@ -1,0 +1,23 @@
+import reflex as rx
+
+
+BACKGROUND_COLOR = "#182028"
+
+CARD_COLOR = "#27313B"
+
+BORDER_COLOR = "#506070"
+
+TEXT_COLOR = "#D9D7D1"
+
+MUTED_TEXT = "#8A9AA8"
+
+ACCENT_COLOR = "#8FA3B8"
+
+CARD_BORDER = f"1px solid {BORDER_COLOR}"
+
+
+base_style = {
+    "background_color": BACKGROUND_COLOR,
+    "color": TEXT_COLOR,
+    "min_height": "100vh",
+}

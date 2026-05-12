@@ -2,6 +2,7 @@ HOME_ROUTE = "/"
 LOGIN_ROUTE = "/login"
 REGISTER_ROUTE = "/register"
 PROFILE_ROUTE = "/profile"
+FAVORITES_ROUTE = "/favorites"
 
 INSTRUMENTS_ROUTE = "/instruments"
 

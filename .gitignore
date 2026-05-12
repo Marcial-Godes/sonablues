@@ -13,3 +13,4 @@ sonablues.db
 reflex.db
 .web/
 .venv/
+.vscode/

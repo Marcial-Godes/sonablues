@@ -26,6 +26,7 @@ C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\badge_group.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\content_section.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\cover_image.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\empty_state.py
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\favorite_button.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\meta_badge.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\muted_text.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\page_title.py
@@ -50,6 +51,7 @@ C:\Users\mazin\Desktop\Python\sonablues\sonablues\database\db.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\models\user.py
 
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\pages\artists.py
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\pages\favorites.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\pages\home.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\pages\instruments.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\pages\login.py

@@ -15,6 +15,7 @@ from sonablues.routes import (
     INSTRUMENTS_ROUTE,
     ELECTRIC_ARTISTS_ROUTE,
     ACOUSTIC_ARTISTS_ROUTE,
+    FAVORITES_ROUTE,
     songs_route,
     song_detail_route,
 )
@@ -30,12 +31,22 @@ from sonablues.pages.song_detail import song_detail_page
 from sonablues.states.profile_state import (
     ProfileState,
 )
+from sonablues.states.auth_state import (
+    AuthState,
+)
+from sonablues.pages.favorites import (
+    favorites_page,
+)
 
 
 def register_pages(app: rx.App):
 
     # Home
-    app.add_page(home_page, route=HOME_ROUTE)
+    app.add_page(
+        home_page,
+        route=HOME_ROUTE,
+        on_load=AuthState.restore_session,
+    )
 
     # Auth
     app.add_page(login_page, route=LOGIN_ROUTE)
@@ -63,6 +74,11 @@ def register_pages(app: rx.App):
     app.add_page(
         lambda: artists_page(ACOUSTIC),
         route=ACOUSTIC_ARTISTS_ROUTE,
+    )
+    app.add_page(
+        favorites_page,
+        route=FAVORITES_ROUTE,
+        on_load=ProfileState.load_favorites,
     )
 
     # Songs pages

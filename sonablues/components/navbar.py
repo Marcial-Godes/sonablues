@@ -34,9 +34,24 @@ def navbar() -> rx.Component:
 
             rx.hstack(
 
-                rx.text(
-                    f"Hola {AuthState.current_user}",
-                    color=TEXT_COLOR,
+                rx.hstack(
+
+                    rx.text(
+                        "Hola",
+                        color=TEXT_COLOR,
+                    ),
+
+                    rx.text(
+                        AuthState.current_user,
+                        color=TEXT_COLOR,
+                        weight="bold",
+                    ),
+
+                    spacing="2",
+                ),
+                rx.link(
+                    "Favorites",
+                    href="/favorites",
                 ),
 
                 rx.button(

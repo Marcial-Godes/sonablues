@@ -29,6 +29,8 @@ class AuthState(rx.State):
     is_authenticated: bool = False
 
     current_user: str = ""
+    
+    stored_user: str = rx.LocalStorage("")
 
     error_message: str = ""
 
@@ -51,8 +53,12 @@ class AuthState(rx.State):
         self,
         song_slug: str,
     ) -> bool:
-
         return song_slug in self.favorite_songs_list
+    
+    def restore_session(self):
+        if self.stored_user:
+            self.current_user = self.stored_user
+            self.is_authenticated = True
 
     def set_username(
         self,
@@ -105,6 +111,8 @@ class AuthState(rx.State):
         self.is_authenticated = True
 
         self.current_user = user.username
+        
+        self.stored_user = user.username
 
         self.error_message = ""
 
@@ -168,6 +176,8 @@ class AuthState(rx.State):
         self.is_authenticated = False
 
         self.current_user = ""
+        
+        self.stored_user = ""
 
         self.username = ""
 

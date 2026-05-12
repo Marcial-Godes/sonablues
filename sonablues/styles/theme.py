@@ -21,5 +21,4 @@ ACCENT_BACKGROUND = "#8FA3B81F"
 base_style = {
     "background_color": BACKGROUND_COLOR,
     "color": TEXT_COLOR,
-    "min_height": "100vh",
 }

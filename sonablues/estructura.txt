@@ -35,6 +35,7 @@ C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\page_title.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\section_title.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\surface.py
 
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\footer.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\layouts.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\navbar.py
 

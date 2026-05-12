@@ -2,6 +2,8 @@ Estructura actual:
 C:\Users\mazin\Desktop\Python\sonablues\.venv
 
 C:\Users\mazin\Desktop\Python\sonablues\assets
+C:\Users\mazin\Desktop\Python\sonablues\assets\icons\heart-filled.svg
+C:\Users\mazin\Desktop\Python\sonablues\assets\icons\heart-outline.svg
 
 C:\Users\mazin\Desktop\Python\sonablues\.gitignore
 C:\Users\mazin\Desktop\Python\sonablues\README.md

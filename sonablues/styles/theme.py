@@ -15,6 +15,8 @@ ACCENT_COLOR = "#8FA3B8"
 
 CARD_BORDER = f"1px solid {BORDER_COLOR}"
 
+ACCENT_BACKGROUND = "#8FA3B81F"
+
 
 base_style = {
     "background_color": BACKGROUND_COLOR,

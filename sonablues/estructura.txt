@@ -4,6 +4,8 @@ C:\Users\mazin\Desktop\Python\sonablues\.venv
 C:\Users\mazin\Desktop\Python\sonablues\assets
 C:\Users\mazin\Desktop\Python\sonablues\assets\icons\heart-filled.svg
 C:\Users\mazin\Desktop\Python\sonablues\assets\icons\heart-outline.svg
+C:\Users\mazin\Desktop\Python\sonablues\assets\images\
+C:\Users\mazin\Desktop\Python\sonablues\assets\images\hero\hero-guitar.jpg
 
 C:\Users\mazin\Desktop\Python\sonablues\.gitignore
 C:\Users\mazin\Desktop\Python\sonablues\README.md
@@ -12,6 +14,8 @@ C:\Users\mazin\Desktop\Python\sonablues\rxconfig.py
 
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\cards\artist_card.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\cards\song_card.py
+
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\home\home_hero.py
 
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\search__init__.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\search\song_search_input.py
@@ -88,3 +92,50 @@ C:\Users\mazin\Desktop\Python\sonablues\sonablues\app_pages.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\config.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\constants.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\sonablues.py
+
+
+magenes - Home
+1. Hero image cinematográfica en Home
+
+Una sola imagen grande.
+
+Por ejemplo:
+
+guitarra en estudio oscuro
+amplificador vintage
+escenario con luz cálida
+manos tocando guitarra
+micrófono blues/jazz
+ambiente analógico
+
+NO:
+
+stock corporativo
+guitarristas sonriendo
+fotos demasiado coloridas
+imágenes “curso online”
+
+Tu paleta pide:
+
+negros
+azules oscuros
+ámbar cálido
+sombras
+grano
+ambiente nocturno
+
+
+Dónde conseguir imágenes buenas
+Gratis y bastante decentes
+Unsplash
+Pexels
+
+Busca:
+
+blues guitar
+guitar amp
+dark studio guitar
+vintage guitar
+moody guitar
+guitar close up
+blues stage

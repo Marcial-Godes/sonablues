@@ -4,18 +4,8 @@ from sonablues.components.layouts import (
     base_layout,
 )
 
-from sonablues.components.ui import (
-    page_title,
-    muted_text,
-    action_link,
-)
-
-from sonablues.routes import (
-    ELECTRIC_ARTISTS_ROUTE,
-)
-
-from sonablues.styles.spacing import (
-    LARGE_GAP,
+from sonablues.components.home.home_hero import (
+    home_hero,
 )
 
 
@@ -25,37 +15,9 @@ def home_page() -> rx.Component:
 
         rx.vstack(
 
-            rx.badge(
-                "Rock • Blues • Guitar",
-                color_scheme="blue",
-                size="3",
-            ),
+            home_hero(),
 
-            page_title(
-                "Sonablues",
-            ),
-
-            muted_text(
-                "Aprende canciones, riffs y guitarra paso a paso.",
-                size="5",
-            ),
-
-            rx.hstack(
-
-                action_link(
-                    "Explorar canciones",
-                    href=ELECTRIC_ARTISTS_ROUTE,
-                ),
-
-                rx.button(
-                    "Mi perfil",
-                    variant="outline",
-                    size="3",
-                ),
-            ),
-
-            spacing=LARGE_GAP,
+            width="100%",
             align="start",
-            margin_top="4rem",
         )
     )

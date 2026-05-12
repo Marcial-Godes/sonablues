@@ -4,13 +4,10 @@ from sonablues.components.layouts import (
     base_layout,
 )
 
-from sonablues.components.cards.song_card import (
-    song_card,
-)
-
 from sonablues.components.ui import (
-    section_title,
-    empty_state,
+    page_title,
+    muted_text,
+    surface,
 )
 
 from sonablues.states.auth_state import (
@@ -25,56 +22,64 @@ from sonablues.styles.spacing import (
     LARGE_GAP,
 )
 
-from sonablues.states.profile_state import (
-    ProfileState,
-)
-
 
 def profile_content() -> rx.Component:
+
     return rx.vstack(
 
-        rx.heading(
-            "Perfil",
-            size="8",
+        page_title(
+            "Profile",
         ),
 
-        rx.text(
-            f"Usuario actual: {AuthState.current_user}",
-            size="4",
+        muted_text(
+            f"Welcome back, {AuthState.current_user}",
         ),
 
-        rx.vstack(
+        surface(
 
-            section_title(
-                "Favorite songs",
-            ),
+            rx.vstack(
 
-            rx.cond(
+                rx.heading(
+                    "Account Overview",
+                    size="5",
+                ),
 
-                ProfileState.favorite_songs.length() > 0,
+                muted_text(
+                    (
+                        "Your personal dashboard will appear here "
+                        "in future updates."
+                    ),
+                ),
 
-                rx.grid(
+                rx.divider(),
 
-                    rx.foreach(
-                        ProfileState.favorite_songs,
-                        lambda song: song_card(song),
+                rx.vstack(
+
+                    rx.text(
+                        "Planned features:",
+                        weight="bold",
                     ),
 
-                    columns={
-                        "base": "1",
-                        "md": "2",
-                    },
+                    rx.text("• Learning progress"),
 
-                    spacing=LARGE_GAP,
+                    rx.text("• Recently viewed lessons"),
+
+                    rx.text("• Practice history"),
+
+                    rx.text("• Custom playlists"),
+
+                    rx.text("• Personal notes"),
+
+                    spacing="2",
+                    align="start",
                     width="100%",
                 ),
 
-                empty_state(
-                    title="No favorite songs yet",
-                ),
+                spacing=LARGE_GAP,
+                align="start",
+                width="100%",
             ),
 
-            spacing=LARGE_GAP,
             width="100%",
         ),
 
@@ -85,9 +90,10 @@ def profile_content() -> rx.Component:
 
 
 def profile_page() -> rx.Component:
+
     return base_layout(
 
         protected_page(
-            profile_content()
+            profile_content(),
         )
     )

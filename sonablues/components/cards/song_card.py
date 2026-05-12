@@ -1,18 +1,26 @@
 import reflex as rx
-from sonablues.data.models.song_model import Song
+
+from sonablues.data.models.song_model import (
+    Song,
+)
+
 from sonablues.routes import (
     song_detail_route,
 )
+
 from sonablues.components.ui import (
     surface,
     cover_image,
     badge_group,
     meta_badge,
+    favorite_button,
 )
+
 from sonablues.styles.theme import (
     TEXT_COLOR,
     ACCENT_COLOR,
 )
+
 from sonablues.styles.spacing import (
     EXTRA_SMALL_GAP,
     SMALL_GAP,
@@ -20,50 +28,85 @@ from sonablues.styles.spacing import (
 )
 
 
-def song_card(song: Song) -> rx.Component:
-    return rx.link(
-        surface(
-            rx.vstack(
-                cover_image(
-                    src=song.image,
-                    height="220px",
-                ),
+def song_card(
+    song: Song,
+) -> rx.Component:
+
+    return surface(
+
+        rx.vstack(
+
+            rx.link(
+
                 rx.vstack(
-                    rx.heading(
-                        song.title,
-                        size="5",
-                        color=TEXT_COLOR,
+
+                    cover_image(
+                        src=song.image,
+                        height="220px",
                     ),
-                    rx.hstack(
-                        meta_badge(
-                            song.difficulty,
-                            color_scheme="blue",
+
+                    rx.vstack(
+
+                        rx.heading(
+                            song.title,
+                            size="5",
+                            color=TEXT_COLOR,
                         ),
-                        meta_badge(
-                            song.tuning,
+
+                        rx.hstack(
+
+                            meta_badge(
+                                song.difficulty,
+                                color_scheme="blue",
+                            ),
+
+                            meta_badge(
+                                song.tuning,
+                            ),
+
+                            spacing=EXTRA_SMALL_GAP,
+                            wrap="wrap",
                         ),
-                        spacing=EXTRA_SMALL_GAP,
-                        wrap="wrap",
+
+                        badge_group(
+                            song.techniques,
+                            size="1",
+                        ),
+
+                        spacing=SMALL_GAP,
+                        align="start",
+                        width="100%",
                     ),
-                    badge_group(
-                        song.techniques,
-                        size="1",
-                    ),
-                    spacing=SMALL_GAP,
+
+                    spacing=MEDIUM_GAP,
                     align="start",
                     width="100%",
                 ),
-                spacing=MEDIUM_GAP,
-                align="start",
+
+                href=song_detail_route(
+                    song.slug,
+                ),
+
+                width="100%",
+
+                text_decoration="none",
             ),
+
+            favorite_button(
+                song.slug,
+            ),
+
+            spacing=MEDIUM_GAP,
+            align="start",
             width="100%",
-            transition="0.2s ease",
-            _hover={
-                "transform": "translateY(-4px)",
-                "border": f"1px solid {ACCENT_COLOR}",
-            },
         ),
-        href=song_detail_route(song.slug),
+
         width="100%",
-        text_decoration="none",
+
+        transition="0.2s ease",
+
+        _hover={
+            "transform": "translateY(-4px)",
+            "border": f"1px solid {ACCENT_COLOR}",
+        },
     )

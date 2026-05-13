@@ -8,6 +8,7 @@ SONGS: dict[str, list[Song]] = {
         Song(
             title="Sloe Gin",
             slug="sloe-gin",
+            artist="Joe Bonamassa",
             difficulty="Advanced",
             tuning="Standard",
 
@@ -42,6 +43,7 @@ SONGS: dict[str, list[Song]] = {
         Song(
             title="Spanish Boots",
             slug="spanish-boots",
+            artist="Joe Bonamassa",
             difficulty="Intermediate",
             tuning="Standard",
 
@@ -69,6 +71,7 @@ SONGS: dict[str, list[Song]] = {
         Song(
             title="Slow Dancing in a Burning Room",
             slug="slow-dancing",
+            artist="John Mayer",
             difficulty="Intermediate",
             tuning="Standard",
 
@@ -91,6 +94,7 @@ SONGS: dict[str, list[Song]] = {
         Song(
             title="Gravity",
             slug="gravity",
+            artist="John Mayer",
             difficulty="Beginner / Intermediate",
             tuning="Standard",
 
@@ -115,6 +119,7 @@ SONGS: dict[str, list[Song]] = {
         Song(
             title="Little Wing",
             slug="little-wing",
+            artist="Jimi Hendrix",
             difficulty="Advanced",
             tuning="Standard",
 
@@ -141,6 +146,7 @@ SONGS: dict[str, list[Song]] = {
             title="Pride and Joy",
             slug="pride-and-joy",
             difficulty="Intermediate",
+            artist="Stivie Ray Vaughan",
             tuning="Half Step Down",
 
             techniques=[
@@ -164,6 +170,7 @@ SONGS: dict[str, list[Song]] = {
         Song(
             title="Angelina",
             slug="angelina",
+            artist="Tommy Emmanuel",
             difficulty="Advanced",
             tuning="Standard",
 

@@ -90,10 +90,19 @@ def register_pages(app: rx.App):
             route=songs_route(artist_slug),
         )
 
+
     # Song detail pages
     for artist_songs in SONGS.values():
         for song in artist_songs:
+            def make_song_page(
+                current_slug: str,
+            ):
+                return lambda: song_detail_page(
+                    current_slug,
+                )
             app.add_page(
-                lambda song_slug=song.slug: song_detail_page(song_slug),
-                route=song_detail_route(song.slug),
+                make_song_page(song.slug),
+                route=song_detail_route(
+                    song.slug,
+                ),
             )

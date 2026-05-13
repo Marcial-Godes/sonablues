@@ -7,14 +7,10 @@ from sonablues.styles.theme import (
     MUTED_TEXT,
 )
 
-from sonablues.styles.spacing import (
-    MEDIUM_GAP,
-)
-
 
 def footer() -> rx.Component:
 
-    return rx.hstack(
+    return rx.flex(
 
         rx.vstack(
 
@@ -31,6 +27,7 @@ def footer() -> rx.Component:
             ),
 
             spacing="1",
+
             align="start",
         ),
 
@@ -42,13 +39,26 @@ def footer() -> rx.Component:
             size="2",
         ),
 
+        direction={
+            "base": "column",
+            "sm": "row",
+        },
+
+        gap="4",
+
+        align={
+            "base": "start",
+            "sm": "center",
+        },
+
         width="100%",
 
-        padding="1.5rem 2rem",
+        padding={
+            "base": "1rem",
+            "md": "1.5rem 2rem",
+        },
 
         background_color=CARD_COLOR,
 
         border_top=f"1px solid {BORDER_COLOR}",
-
-        align="center",
     )

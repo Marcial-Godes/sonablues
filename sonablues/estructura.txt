@@ -1,11 +1,12 @@
 Estructura actual:
 C:\Users\mazin\Desktop\Python\sonablues\.venv
 
-C:\Users\mazin\Desktop\Python\sonablues\assets
+C:\Users\mazin\Desktop\Python\sonablues\assets\styles.css
+
 C:\Users\mazin\Desktop\Python\sonablues\assets\icons\heart-filled.svg
 C:\Users\mazin\Desktop\Python\sonablues\assets\icons\heart-outline.svg
-C:\Users\mazin\Desktop\Python\sonablues\assets\images\
 C:\Users\mazin\Desktop\Python\sonablues\assets\images\hero\hero-guitar.jpg
+C:\Users\mazin\Desktop\Python\sonablues\assets\images\songs\sloe-gin.jpg
 
 C:\Users\mazin\Desktop\Python\sonablues\.gitignore
 C:\Users\mazin\Desktop\Python\sonablues\README.md
@@ -15,7 +16,9 @@ C:\Users\mazin\Desktop\Python\sonablues\rxconfig.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\cards\artist_card.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\cards\song_card.py
 
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\home\featured_songs.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\home\home_hero.py
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\home\learning_section.py
 
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\search__init__.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\search\song_search_input.py
@@ -44,7 +47,6 @@ C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\layouts.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\navbar.py
 
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\data\artist_model.py
-C:\Users\mazin\Desktop\Python\sonablues\sonablues\data\lessons_data.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\data\song_model.py
 
 
@@ -52,6 +54,11 @@ C:\Users\mazin\Desktop\Python\sonablues\sonablues\data\mock\artist_indexes.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\data\mock\artists_data.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\data\mock\song_indexes.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\data\mock\songs_data.py
+
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\data\lessons_data.py
+
+
+
 
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\database\db.py
 

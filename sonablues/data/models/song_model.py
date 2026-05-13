@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 
 @dataclass
@@ -11,8 +11,19 @@ class Video:
 class Song:
     title: str
     slug: str
+
+    artist: str
+
     difficulty: str
+
     tuning: str
-    techniques: list[str]
-    videos: list[Video]
-    image: str
+
+    techniques: list[str] = field(
+        default_factory=list
+    )
+
+    videos: list[Video] = field(
+        default_factory=list
+    )
+
+    image: str = ""

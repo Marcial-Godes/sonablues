@@ -46,8 +46,10 @@ C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\footer.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\layouts.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\navbar.py
 
-C:\Users\mazin\Desktop\Python\sonablues\sonablues\data\artist_model.py
-C:\Users\mazin\Desktop\Python\sonablues\sonablues\data\song_model.py
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\data\models\artist_model.py
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\data\models\difficulty.py
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\data\models\song_model.py
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\data\models\user.py
 
 
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\data\mock\artist_indexes.py
@@ -62,7 +64,6 @@ C:\Users\mazin\Desktop\Python\sonablues\sonablues\data\lessons_data.py
 
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\database\db.py
 
-C:\Users\mazin\Desktop\Python\sonablues\sonablues\models\user.py
 
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\pages\artists.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\pages\favorites.py

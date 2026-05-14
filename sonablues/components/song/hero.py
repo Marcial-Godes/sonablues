@@ -1,7 +1,5 @@
 import reflex as rx
-
 from sonablues.data.models.song_model import Song
-
 from sonablues.components.ui import (
     page_title,
     muted_text,
@@ -9,11 +7,9 @@ from sonablues.components.ui import (
     cover_image,
     meta_badge,
 )
-
 from sonablues.styles.sizes import (
     CONTENT_WIDTH,
 )
-
 from sonablues.styles.spacing import (
     SMALL_GAP,
     LARGE_GAP,
@@ -41,7 +37,15 @@ def song_hero(song: Song) -> rx.Component:
 
                 meta_badge(
                     song.difficulty,
-                    color_scheme="blue",
+                    color_scheme=rx.cond(
+                        song.difficulty == "Beginner",
+                        "green",
+                        rx.cond(
+                            song.difficulty == "Intermediate",
+                            "orange",
+                            "red",
+                        ),
+                    ),
                     size="3",
                 ),
 
@@ -49,7 +53,6 @@ def song_hero(song: Song) -> rx.Component:
                     song.tuning,
                     size="3",
                 ),
-
                 spacing=SMALL_GAP,
             ),
 
@@ -67,12 +70,10 @@ def song_hero(song: Song) -> rx.Component:
                 size="5",
                 max_width="800px",
             ),
-
             spacing=LARGE_GAP,
             align="start",
             width="100%",
         ),
-
         spacing=PAGE_GAP,
         align="start",
         width="100%",

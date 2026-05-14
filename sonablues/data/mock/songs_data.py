@@ -1,4 +1,5 @@
 from sonablues.data.models.song_model import Song, Video
+from sonablues.data.models.difficulty import Difficulty
 
 
 SONGS: dict[str, list[Song]] = {
@@ -9,7 +10,7 @@ SONGS: dict[str, list[Song]] = {
             title="Sloe Gin",
             slug="sloe-gin",
             artist="Joe Bonamassa",
-            difficulty="Advanced",
+            difficulty=Difficulty.ADVANCED,
             tuning="Standard",
 
             techniques=[
@@ -37,14 +38,14 @@ SONGS: dict[str, list[Song]] = {
                 ),
             ],
 
-            image="https://images.unsplash.com/photo-1516280440614-37939bbacd81",
+            image="/images/songs/joe-bonamassa/sloe-gin.png",
         ),
 
         Song(
             title="Spanish Boots",
             slug="spanish-boots",
             artist="Joe Bonamassa",
-            difficulty="Intermediate",
+            difficulty=Difficulty.INTERMEDIATE,
             tuning="Standard",
 
             techniques=[
@@ -54,25 +55,22 @@ SONGS: dict[str, list[Song]] = {
                 "Pentatonic Runs",
                 "Rhythmic Accents",
             ],
-
             videos=[
                 Video(
                     title="Introduction",
                     youtube_id="k47-9KNlFY4",
                 ),
             ],
-
-            image="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f",
+            image="/images/songs/joe-bonamassa/spanish-boots.png",
         ),
     ],
 
     "john-mayer": [
-
         Song(
             title="Slow Dancing in a Burning Room",
             slug="slow-dancing",
             artist="John Mayer",
-            difficulty="Intermediate",
+            difficulty=Difficulty.INTERMEDIATE,
             tuning="Standard",
 
             techniques=[
@@ -88,14 +86,14 @@ SONGS: dict[str, list[Song]] = {
                 ),
             ],
 
-            image="https://images.unsplash.com/photo-1516280440614-37939bbacd81",
+            image="/images/songs/john-mayer/slow-dancing-in-a-burning-room.png",
         ),
 
         Song(
             title="Gravity",
             slug="gravity",
             artist="John Mayer",
-            difficulty="Beginner / Intermediate",
+            difficulty=Difficulty.INTERMEDIATE,
             tuning="Standard",
 
             techniques=[
@@ -110,7 +108,7 @@ SONGS: dict[str, list[Song]] = {
                 ),
             ],
 
-            image="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f",
+            image="/images/songs/john-mayer/gravity.png",
         ),
     ],
 
@@ -120,7 +118,7 @@ SONGS: dict[str, list[Song]] = {
             title="Little Wing",
             slug="little-wing",
             artist="Jimi Hendrix",
-            difficulty="Advanced",
+            difficulty=Difficulty.ADVANCED,
             tuning="Standard",
 
             techniques=[
@@ -136,7 +134,7 @@ SONGS: dict[str, list[Song]] = {
                 ),
             ],
 
-            image="https://images.unsplash.com/photo-1511379938547-c1f69419868d",
+            image="/images/songs/jimi-hendrix/little-wing.png",
         ),
     ],
 
@@ -145,8 +143,8 @@ SONGS: dict[str, list[Song]] = {
         Song(
             title="Pride and Joy",
             slug="pride-and-joy",
-            difficulty="Intermediate",
-            artist="Stivie Ray Vaughan",
+            difficulty=Difficulty.INTERMEDIATE,
+            artist="Stevie Ray Vaughan",
             tuning="Half Step Down",
 
             techniques=[
@@ -161,7 +159,7 @@ SONGS: dict[str, list[Song]] = {
                 ),
             ],
 
-            image="https://images.unsplash.com/photo-1516280440614-37939bbacd81",
+            image="/images/songs/stevie-ray-vaughan/pride-and-joy.png",
         ),
     ],
 
@@ -171,7 +169,7 @@ SONGS: dict[str, list[Song]] = {
             title="Angelina",
             slug="angelina",
             artist="Tommy Emmanuel",
-            difficulty="Advanced",
+            difficulty=Difficulty.ADVANCED,
             tuning="Standard",
 
             techniques=[
@@ -186,7 +184,7 @@ SONGS: dict[str, list[Song]] = {
                 ),
             ],
 
-            image="https://images.unsplash.com/photo-1510915361894-db8b60106cb1",
+            image="/images/songs/tommy-emmanuel/angelina.png",
         ),
     ],
 }

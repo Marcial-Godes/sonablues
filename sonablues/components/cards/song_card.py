@@ -1,13 +1,10 @@
 import reflex as rx
-
 from sonablues.data.models.song_model import (
     Song,
 )
-
 from sonablues.routes import (
     song_detail_route,
 )
-
 from sonablues.components.ui import (
     surface,
     cover_image,
@@ -15,12 +12,10 @@ from sonablues.components.ui import (
     meta_badge,
     favorite_button,
 )
-
 from sonablues.styles.theme import (
     TEXT_COLOR,
     ACCENT_COLOR,
 )
-
 from sonablues.styles.spacing import (
     EXTRA_SMALL_GAP,
     SMALL_GAP,
@@ -57,7 +52,15 @@ def song_card(
 
                             meta_badge(
                                 song.difficulty,
-                                color_scheme="blue",
+                                color_scheme=rx.cond(
+                                    song.difficulty == "Beginner",
+                                    "green",
+                                    rx.cond(
+                                        song.difficulty == "Intermediate",
+                                        "orange",
+                                        "red",
+                                    ),
+                                ),
                             ),
 
                             meta_badge(

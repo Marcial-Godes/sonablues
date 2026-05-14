@@ -1,7 +1,9 @@
 from sonablues.data.mock.songs_data import SONGS
 from sonablues.data.mock.song_indexes import SONGS_BY_SLUG
-
 from sonablues.data.models.song_model import Song
+from sonablues.data.models.difficulty import (
+    DIFFICULTY_ORDER,
+)
 
 
 def get_song(song_slug: str) -> Song | None:
@@ -24,3 +26,15 @@ def get_featured_songs():
         for song in artist_songs
         if song.slug in featured_slugs
     ]
+
+
+def sort_songs_by_difficulty(
+    songs: list[Song],
+) -> list[Song]:
+
+    return sorted(
+        songs,
+        key=lambda song: DIFFICULTY_ORDER[
+            song.difficulty
+        ],
+    )

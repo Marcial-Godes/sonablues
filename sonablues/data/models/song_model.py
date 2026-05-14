@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+from sonablues.data.models.difficulty import Difficulty
 
 
 @dataclass
@@ -11,19 +12,13 @@ class Video:
 class Song:
     title: str
     slug: str
-
     artist: str
-
-    difficulty: str
-
+    difficulty: Difficulty
     tuning: str
-
     techniques: list[str] = field(
         default_factory=list
     )
-
     videos: list[Video] = field(
         default_factory=list
     )
-
     image: str = ""

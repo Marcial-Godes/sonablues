@@ -1,17 +1,14 @@
 import reflex as rx
-from sonablues.styles.theme import (
-    CARD_COLOR,
-    BORDER_COLOR,
-)
-from sonablues.components.ui import muted_text
 from sonablues.routes.routes import (
     song_detail_route,
 )
 from sonablues.services.song_service import (
-    get_songs_by_artist,
-)
-from sonablues.services.song_service import (
     get_featured_songs,
+)
+from sonablues.components.ui import (
+    muted_text,
+    surface,
+    cover_image,
 )
 
 
@@ -22,29 +19,19 @@ def song_card(
     difficulty: str,
     slug: str,
 ) -> rx.Component:
-
     return rx.link(
-
-        rx.box(
-
+        surface(
             rx.vstack(
-
-                rx.image(
+                cover_image(
                     src=image_src,
-                    width="100%",
                     height={
                         "base": "170px",
                         "md": "220px",
                         "lg": "180px",
                     },
-                    object_fit="cover",
                     object_position="center top",
-                    border_radius="18px",
-                    display="block",
                 ),
-
                 rx.vstack(
-
                     rx.badge(
                         difficulty,
                         color_scheme=rx.cond(
@@ -58,13 +45,11 @@ def song_card(
                         ),
                         variant="soft",
                     ),
-
                     rx.heading(
                         title,
                         size="5",
                         line_height="1.1",
                     ),
-
                     muted_text(
                         artist,
                         size="3",
@@ -77,19 +62,13 @@ def song_card(
                 align="start",
                 width="100%",
             ),
-            background_color=CARD_COLOR,
-            border=f"1px solid {BORDER_COLOR}",
-            border_radius="20px",
             padding={
                 "base": "0.75rem",
                 "md": "1rem",
             },
             width="100%",
             overflow="hidden",
-            transition="0.2s ease",
-            _hover={
-                "transform": "translateY(-4px)",
-            },
+            hoverable=True,
         ),
         href=song_detail_route(slug),
         width="100%",
@@ -109,7 +88,6 @@ def featured_songs() -> rx.Component:
                 text_align="center",
                 width="100%",
             ),
-
             muted_text(
                 "Aprende algunos de los riffs y canciones más icónicos.",
                 size="4",
@@ -120,7 +98,6 @@ def featured_songs() -> rx.Component:
             align="center",
             width="100%",
         ),
-
         rx.grid(
             rx.foreach(
                 get_featured_songs(),

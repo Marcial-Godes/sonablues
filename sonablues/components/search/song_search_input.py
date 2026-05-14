@@ -1,30 +1,84 @@
 import reflex as rx
-
 from sonablues.states.song_search_state import (
     SongSearchState,
 )
-
 from sonablues.styles.theme import (
     CARD_COLOR,
     CARD_BORDER,
+    TEXT_COLOR,
+    MUTED_TEXT,
+    ACCENT_COLOR,
+    ACCENT_BACKGROUND,
+)
+from sonablues.styles.radius import (
+    INPUT_RADIUS,
+    
+)
+from sonablues.styles.layout import (
+    SEARCH_WIDTH
+)
+from sonablues.styles.transitions import (
+    FAST_TRANSITION
 )
 
 
 def song_search_input() -> rx.Component:
+    return rx.box(
 
-    return rx.input(
+        rx.image(
+        src="/icons/search.svg",
+        width="18px",
+        height="18px",
+        position="absolute",
+        left="14px",
+        top="50%",
+        transform="translateY(-50%)",
+        pointer_events="none",
+        z_index="1",
+    ),
 
-        placeholder="Search songs, techniques or difficulty...",
+        rx.input(
 
-        value=SongSearchState.search_text,
+            placeholder="Search songs, techniques or difficulty...",
 
-        on_change=SongSearchState.set_search,
+            value=SongSearchState.search_text,
 
+            on_change=SongSearchState.set_search,
+
+            width="100%",
+
+            size="3",
+
+            background=CARD_COLOR,
+
+            border=CARD_BORDER,
+
+            border_radius=INPUT_RADIUS,
+
+            color=TEXT_COLOR,
+
+            padding_left="2.5rem",
+
+            padding_right="1rem",
+
+            transition=FAST_TRANSITION,
+
+            _placeholder={
+                "color": "#7F8C99",
+            },
+
+            _hover={
+                "border": f"1px solid {ACCENT_COLOR}",
+            },
+
+            _focus={
+                "border": f"1px solid {ACCENT_COLOR}",
+                "background": ACCENT_BACKGROUND,
+                "box_shadow": "none",
+            },
+        ),
+        position="relative",
         width="100%",
-
-        size="3",
-
-        background=CARD_COLOR,
-
-        border=CARD_BORDER,
+        max_width=SEARCH_WIDTH,
+        margin="12px auto 0 0",
     )

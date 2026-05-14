@@ -1,10 +1,18 @@
 Estructura actual:
 C:\Users\mazin\Desktop\Python\sonablues\.venv
 
+
 C:\Users\mazin\Desktop\Python\sonablues\assets\styles.css
 
+
+C:\Users\mazin\Desktop\Python\sonablues\assets\icons\flame.svg
 C:\Users\mazin\Desktop\Python\sonablues\assets\icons\heart-filled.svg
 C:\Users\mazin\Desktop\Python\sonablues\assets\icons\heart-outline.svg
+C:\Users\mazin\Desktop\Python\sonablues\assets\icons\music.svg
+C:\Users\mazin\Desktop\Python\sonablues\assets\icons\waveform.svg
+C:\Users\mazin\Desktop\Python\sonablues\assets\icons\search.svg
+
+
 C:\Users\mazin\Desktop\Python\sonablues\assets\images\hero\hero-guitar.jpg
 C:\Users\mazin\Desktop\Python\sonablues\assets\images\songs\sloe-gin.jpg
 
@@ -88,15 +96,20 @@ C:\Users\mazin\Desktop\Python\sonablues\sonablues\states\auth_state.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\states\profile_state.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\states\song_search_state.py
 
+
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\styles\layout.py
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\styles\radius.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\styles\sizes.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\styles\spacing.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\styles\theme.py
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\styles\transitions.py
+
 
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\utils\protected.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\utils\security.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\utils\youtube.py
 
-C:\Users\mazin\Desktop\Python\sonablues\sonablues\app_pages.py
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\app_pages.pyP
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\config.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\constants.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\sonablues.py

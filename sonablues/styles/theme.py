@@ -14,7 +14,6 @@ BEGINNER_COLOR = "green"
 INTERMEDIATE_COLOR = "orange"
 ADVANCED_COLOR = "red"
 
-
 base_style = {
     "background_color": BACKGROUND_COLOR,
     "color": TEXT_COLOR,

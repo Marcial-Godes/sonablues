@@ -1,0 +1,2 @@
+FAST_TRANSITION = "all 0.2s ease"
+CARD_TRANSITION = "0.2s ease"

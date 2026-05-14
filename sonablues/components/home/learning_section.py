@@ -1,9 +1,8 @@
 import reflex as rx
-from sonablues.styles.theme import (
-    CARD_COLOR,
-    BORDER_COLOR,
+from sonablues.components.ui import (
+    muted_text,
+    surface,
 )
-from sonablues.components.ui import muted_text
 
 
 def learning_card(
@@ -11,7 +10,7 @@ def learning_card(
     title: str,
     description: str,
 ) -> rx.Component:
-    return rx.box(
+    return surface(
         rx.vstack(
             rx.image(
                 src=icon_src,
@@ -30,15 +29,9 @@ def learning_card(
             spacing="3",
             align="start",
         ),
-        background_color=CARD_COLOR,
-        border=f"1px solid {BORDER_COLOR}",
-        border_radius="20px",
         padding="1.5rem",
         width="100%",
-        transition="0.2s ease",
-        _hover={
-            "transform": "translateY(-4px)",
-        },
+        hoverable=True,
     )
 
 

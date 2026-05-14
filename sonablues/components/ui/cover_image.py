@@ -1,5 +1,5 @@
 import reflex as rx
-from sonablues.styles.sizes import (
+from sonablues.styles.radius import (
     IMAGE_RADIUS,
 )
 

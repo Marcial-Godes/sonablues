@@ -1,32 +1,34 @@
-# home_hero.py
-
 import reflex as rx
-
 from sonablues.components.ui import (
-    muted_text,
-    action_link,
+    app_button,
+    secondary_text,
+    title_text,
+    stack_start,
 )
-
 from sonablues.routes import (
     ELECTRIC_ARTISTS_ROUTE,
     PROFILE_ROUTE,
 )
-
 from sonablues.styles.spacing import LARGE_GAP
 from sonablues.styles.theme import BORDER_COLOR
+from sonablues.styles.tokens import (
+    SECTION_PADDING_Y,
+    SECTION_PADDING_TOP,
+    SECTION_PADDING_BOTTOM,
+)
+from sonablues.components.ui.cover_image import (
+    cover_image,
+)
 
 
 def hero_text() -> rx.Component:
-
-    return rx.vstack(
-
+    return stack_start(
         rx.badge(
             "Rock • Blues • Guitar",
             color_scheme="blue",
             size="2",
         ),
-
-        rx.heading(
+        title_text(
             "Sonablues",
             size={
                 "base": "7",
@@ -34,10 +36,8 @@ def hero_text() -> rx.Component:
                 "lg": "9",
             },
             line_height="1",
-            width="100%",
         ),
-
-        muted_text(
+        secondary_text(
             "Aprende canciones, riffs y guitarra paso a paso.",
             size={
                 "base": "4",
@@ -46,20 +46,16 @@ def hero_text() -> rx.Component:
             },
             max_width="320px",
         ),
-
         rx.flex(
-            action_link(
+            app_button(
                 "Explorar canciones",
                 href=ELECTRIC_ARTISTS_ROUTE,
             ),
-            rx.link(
-                rx.button(
-                    "Mi perfil",
-                    variant="outline",
-                    size="2",
-                ),
+
+            app_button(
+                "Mi perfil",
                 href=PROFILE_ROUTE,
-                text_decoration="none",
+                variant="outline",
                 width={
                     "base": "100%",
                     "md": "auto",
@@ -75,21 +71,14 @@ def hero_text() -> rx.Component:
             "base": "5",
             "sm": LARGE_GAP,
         },
-        align="start",
-        width="100%",
     )
 
 
 def hero_image(height) -> rx.Component:
-
     return rx.box(
-        rx.image(
+        cover_image(
             src="/images/hero/hero-guitar.png",
-            width="100%",
             height=height,
-            object_fit="cover",
-            object_position="center",
-            border_radius="24px",
             border=f"1px solid {BORDER_COLOR}",
             box_shadow="0 20px 60px rgba(0,0,0,0.45)",
         ),
@@ -99,7 +88,6 @@ def hero_image(height) -> rx.Component:
 
 
 def home_hero() -> rx.Component:
-
     mobile_layout = rx.vstack(
         hero_text(),
         hero_image({
@@ -109,9 +97,8 @@ def home_hero() -> rx.Component:
         spacing="7",
         width="100%",
         align="stretch",
-        padding_top="1rem",
+        padding_top=SECTION_PADDING_TOP,
     )
-
     desktop_layout = rx.flex(
         rx.box(
             hero_text(),
@@ -128,20 +115,14 @@ def home_hero() -> rx.Component:
         width="100%",
         align="center",
     )
-
     return rx.box(
-
         rx.mobile_and_tablet(
             mobile_layout,
         ),
-
         rx.desktop_only(
             desktop_layout,
         ),
         width="100%",
-        margin_top={
-            "base": "1rem",
-            "lg": "2rem",
-        },
-        padding_bottom="2rem",
+        margin_top=SECTION_PADDING_Y,
+        padding_bottom=SECTION_PADDING_BOTTOM,
     )

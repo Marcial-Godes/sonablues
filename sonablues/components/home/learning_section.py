@@ -1,8 +1,17 @@
 import reflex as rx
 from sonablues.components.ui import (
-    muted_text,
+    section_header,
     surface,
+    title_text,
+    secondary_text,
+    responsive_grid,
+    stack_start,
+    stack_section,
 )
+from sonablues.styles.tokens import (
+    LEARNING_ICON_SIZE,
+    SECTION_PADDING_Y,
+    )
 
 
 def learning_card(
@@ -11,23 +20,22 @@ def learning_card(
     description: str,
 ) -> rx.Component:
     return surface(
-        rx.vstack(
+        stack_start(
             rx.image(
                 src=icon_src,
-                width="22px",
-                height="22px",
+                width=LEARNING_ICON_SIZE,
+                height=LEARNING_ICON_SIZE,
                 object_fit="contain",
             ),
-            rx.heading(
+            title_text(
                 title,
                 size="5",
             ),
-            muted_text(
+            secondary_text(
                 description,
                 size="3",
             ),
             spacing="3",
-            align="start",
         ),
         padding="1.5rem",
         width="100%",
@@ -36,38 +44,12 @@ def learning_card(
 
 
 def learning_section() -> rx.Component:
-    return rx.vstack(
-        rx.vstack(
-            rx.heading(
-                "Aprende guitarra de forma práctica",
-                size={"base": "5", "md": "7"},
-                text_align="center",
-                width="100%",
-                line_height="1.1",
-                max_width={
-                    "base": "18ch",
-                    "md": "none",
-                },
-            ),
-            muted_text(
-                "Canciones, riffs y técnicas explicadas paso a paso.",
-                size="4",
-                text_align="center",
-                width="100%",
-                max_width={
-                    "base": "18ch",
-                    "md": "none",
-                },
-                margin_x="auto",
-            ),
-            spacing="4",
-            align="center",
-            width="100%",
-            max_width="720px",
-            margin_x="auto",
-            padding_x="1rem",
+    return stack_section(
+        section_header(
+            "Aprende guitarra de forma práctica",
+            "Canciones, riffs y técnicas explicadas paso a paso.",
         ),
-        rx.grid(
+        responsive_grid(
             learning_card(
                 "/icons/music.svg",
                 "Canciones completas",
@@ -83,21 +65,6 @@ def learning_section() -> rx.Component:
                 "Técnicas reales",
                 "Mejora bends, vibrato, dinámica y phrasing.",
             ),
-            columns={
-                "base": "1",
-                "md": "2",
-                "lg": "3",
-            },
-            spacing="6",
-            width="100%",
         ),
-        spacing={
-            "base": "7",
-            "lg": "8",
-        },
-        width="100%",
-        padding_y={
-            "base": "1rem",
-            "lg": "2rem",
-        },
+        padding_y=SECTION_PADDING_Y,
     )

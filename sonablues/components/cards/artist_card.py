@@ -1,51 +1,53 @@
 import reflex as rx
-from sonablues.data.models.artist_model import Artist
-from sonablues.routes import (
-    songs_route,
+from sonablues.data.models.artist_model import (
+    Artist,
 )
 from sonablues.components.ui import (
     surface,
     cover_image,
-    muted_text,
+    card_link,
+    stack_start,
+    stack_section,
+    title_text,
+    secondary_text,
 )
-from sonablues.styles.theme import (
-    TEXT_COLOR,
+from sonablues.routes import (
+    songs_route,
 )
 from sonablues.styles.spacing import (
     EXTRA_SMALL_GAP,
-    MEDIUM_GAP,
+)
+from sonablues.styles.tokens import (
+    SONG_CARD_IMAGE_HEIGHT,
 )
 
 
-def artist_card(artist: Artist) -> rx.Component:
-    return rx.link(
+def artist_card(
+    artist: Artist,
+) -> rx.Component:
+    return card_link(
         surface(
-            rx.vstack(
+            stack_section(
                 cover_image(
                     src=artist.image,
-                    height="220px",
+                    height=SONG_CARD_IMAGE_HEIGHT,
                 ),
-                rx.vstack(
-                    rx.heading(
+                stack_start(
+                    title_text(
                         artist.name,
                         size="5",
-                        color=TEXT_COLOR,
                     ),
-                    muted_text(
+                    secondary_text(
                         artist.description,
                         size="3",
                     ),
                     spacing=EXTRA_SMALL_GAP,
-                    align="start",
-                    width="100%",
                 ),
-                spacing=MEDIUM_GAP,
-                align="start",
             ),
             width="100%",
             hoverable=True,
         ),
-        href=songs_route(artist.slug),
-        width="100%",
-        text_decoration="none",
+        href=songs_route(
+            artist.slug,
+        ),
     )

@@ -1,6 +1,5 @@
-import reflex as rx
-from sonablues.styles.theme import (
-    MUTED_TEXT,
+from sonablues.components.ui.text import (
+    secondary_text,
 )
 
 
@@ -8,10 +7,9 @@ def muted_text(
     text: str,
     size: str = "4",
     **props,
-) -> rx.Component:
-    return rx.text(
+):
+    return secondary_text(
         text,
-        color=MUTED_TEXT,
         size=size,
         line_height="1.7",
         **props,

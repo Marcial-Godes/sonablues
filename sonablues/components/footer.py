@@ -19,20 +19,15 @@ def footer() -> rx.Component:
                 color=TEXT_COLOR,
                 weight="bold",
             ),
-
             rx.text(
                 "Modern blues guitar platform",
                 color=MUTED_TEXT,
                 size="2",
             ),
-
             spacing="1",
-
             align="start",
         ),
-
         rx.spacer(),
-
         rx.text(
             "Made by Marcial",
             color=MUTED_TEXT,

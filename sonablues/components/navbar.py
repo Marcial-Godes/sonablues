@@ -15,6 +15,10 @@ from sonablues.styles.spacing import MEDIUM_GAP
 from sonablues.styles.transitions import (
     CARD_TRANSITION
 )
+from sonablues.components.ui.stacks import (
+    stack_start,
+    stack_section,
+)
 
 
 def nav_link(text, href, active):
@@ -99,7 +103,7 @@ def navbar() -> rx.Component:
         ),
         rx.drawer.overlay(),
         rx.drawer.content(
-            rx.vstack(
+            stack_start(
                 nav_link(
                     "Home",
                     HOME_ROUTE,
@@ -127,8 +131,6 @@ def navbar() -> rx.Component:
                     ),
                 ),
                 spacing="6",
-                align="start",
-                width="100%",
                 padding="2rem",
             ),
             background_color=CARD_COLOR,

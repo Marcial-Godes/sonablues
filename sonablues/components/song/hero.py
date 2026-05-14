@@ -2,10 +2,12 @@ import reflex as rx
 from sonablues.data.models.song_model import Song
 from sonablues.components.ui import (
     page_title,
-    muted_text,
+    secondary_text,
     badge_group,
     cover_image,
-    meta_badge,
+    app_badge,
+    stack_start,
+    stack_section,
 )
 from sonablues.styles.sizes import (
     CONTENT_WIDTH,
@@ -15,53 +17,41 @@ from sonablues.styles.spacing import (
     LARGE_GAP,
     PAGE_GAP,
 )
+from sonablues.styles.tokens import (
+    SONG_HERO_IMAGE_HEIGHT,
+    )
 
 
-def song_hero(song: Song) -> rx.Component:
-
-    return rx.vstack(
-
+def song_hero(
+    song: Song,
+) -> rx.Component:
+    return stack_section(
         cover_image(
             src=song.image,
-            height="460px",
+            height=SONG_HERO_IMAGE_HEIGHT,
             max_width=CONTENT_WIDTH,
         ),
-
-        rx.vstack(
-
+        stack_start(
             page_title(
                 song.title,
             ),
-
             rx.hstack(
-
-                meta_badge(
+                app_badge(
                     song.difficulty,
-                    color_scheme=rx.cond(
-                        song.difficulty == "Beginner",
-                        "green",
-                        rx.cond(
-                            song.difficulty == "Intermediate",
-                            "orange",
-                            "red",
-                        ),
-                    ),
+                    variant="difficulty",
                     size="3",
                 ),
-
-                meta_badge(
+                app_badge(
                     song.tuning,
                     size="3",
                 ),
                 spacing=SMALL_GAP,
             ),
-
             badge_group(
                 song.techniques,
                 size="3",
             ),
-
-            muted_text(
+            secondary_text(
                 (
                     "Lección enfocada en dinámica, "
                     "control expresivo, vibrato "
@@ -71,10 +61,6 @@ def song_hero(song: Song) -> rx.Component:
                 max_width="800px",
             ),
             spacing=LARGE_GAP,
-            align="start",
-            width="100%",
         ),
         spacing=PAGE_GAP,
-        align="start",
-        width="100%",
     )

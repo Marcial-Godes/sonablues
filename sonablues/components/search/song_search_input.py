@@ -20,6 +20,9 @@ from sonablues.styles.layout import (
 from sonablues.styles.transitions import (
     FAST_TRANSITION
 )
+from sonablues.styles.tokens import (
+    INPUT_ICON_SIZE,
+    )
 
 
 def song_search_input() -> rx.Component:
@@ -27,8 +30,8 @@ def song_search_input() -> rx.Component:
 
         rx.image(
         src="/icons/search.svg",
-        width="18px",
-        height="18px",
+        width=INPUT_ICON_SIZE,
+        height=INPUT_ICON_SIZE,
         position="absolute",
         left="14px",
         top="50%",

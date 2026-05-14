@@ -1,19 +1,23 @@
 import reflex as rx
-from sonablues.components.ui import (
-    action_button,
-)
 
 
-def action_link(
-    text: str,
+def card_link(
+    *children,
     href: str,
     **props,
 ) -> rx.Component:
+
     return rx.link(
-        action_button(
-            text,
-        ),
+
+        *children,
+
         href=href,
+
+        width="100%",
+
         text_decoration="none",
+
+        display="block",
+
         **props,
     )

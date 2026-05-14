@@ -8,6 +8,9 @@ from sonablues.styles.theme import (
     TEXT_COLOR,
     ACCENT_BACKGROUND,
 )
+from sonablues.styles.tokens import (
+    INPUT_ICON_SIZE,
+    )
 
 
 def favorite_button(
@@ -24,13 +27,13 @@ def favorite_button(
                 is_favorite,
                 rx.image(
                     src="/icons/heart-filled.svg",
-                    width="18px",
-                    height="18px",
+                    width=INPUT_ICON_SIZE,
+                    height=INPUT_ICON_SIZE,
                 ),
                 rx.image(
                     src="/icons/heart-outline.svg",
-                    width="18px",
-                    height="18px",
+                    width=INPUT_ICON_SIZE,
+                    height=INPUT_ICON_SIZE,
                 ),
             ),
             rx.cond(

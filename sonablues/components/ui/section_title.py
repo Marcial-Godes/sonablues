@@ -1,14 +1,15 @@
-import reflex as rx
-from sonablues.styles.theme import (
-    TEXT_COLOR,
+from sonablues.components.ui.text import (
+    title_text,
+)
+from sonablues.styles.tokens import (
+    TITLE_SIZE_SECTION,
 )
 
 
 def section_title(
     text: str,
-) -> rx.Component:
-    return rx.heading(
+):
+    return title_text(
         text,
-        size="6",
-        color=TEXT_COLOR,
+        size=TITLE_SIZE_SECTION,
     )

@@ -1,13 +1,11 @@
 import reflex as rx
 
-from sonablues.styles.spacing import (
-    EXTRA_SMALL_GAP,
+from sonablues.components.ui.app_badge import (
+    app_badge,
 )
 
-from sonablues.styles.theme import (
-    BORDER_COLOR,
-    TEXT_COLOR,
-    ACCENT_BACKGROUND,
+from sonablues.styles.spacing import (
+    EXTRA_SMALL_GAP,
 )
 
 
@@ -22,21 +20,10 @@ def badge_group(
 
             items,
 
-            lambda item: rx.badge(
-
+            lambda item: app_badge(
                 item,
-
+                variant="tag",
                 size=size,
-
-                color=TEXT_COLOR,
-
-                background_color=ACCENT_BACKGROUND,
-
-                border=f"1px solid {BORDER_COLOR}",
-
-                padding_x="0.5rem",
-
-                padding_y="0.15rem",
             ),
         ),
 

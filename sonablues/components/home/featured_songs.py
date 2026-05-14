@@ -5,10 +5,22 @@ from sonablues.routes.routes import (
 from sonablues.services.song_service import (
     get_featured_songs,
 )
+
+from sonablues.styles.tokens import (
+    FEATURED_CARD_IMAGE_HEIGHT,
+    SECTION_PADDING_Y,
+    )
 from sonablues.components.ui import (
-    muted_text,
+    section_header,
     surface,
     cover_image,
+    title_text,
+    secondary_text,
+    responsive_grid,
+    app_badge,
+    card_link,
+    stack_start,
+    stack_section,
 )
 
 
@@ -19,48 +31,30 @@ def song_card(
     difficulty: str,
     slug: str,
 ) -> rx.Component:
-    return rx.link(
+    return card_link(
         surface(
-            rx.vstack(
+            stack_section(
                 cover_image(
                     src=image_src,
-                    height={
-                        "base": "170px",
-                        "md": "220px",
-                        "lg": "180px",
-                    },
+                    height=FEATURED_CARD_IMAGE_HEIGHT,
                     object_position="center top",
                 ),
-                rx.vstack(
-                    rx.badge(
+                stack_start(
+                    app_badge(
                         difficulty,
-                        color_scheme=rx.cond(
-                            difficulty == "Beginner",
-                            "green",
-                            rx.cond(
-                                difficulty == "Intermediate",
-                                "orange",
-                                "red",
-                            ),
-                        ),
-                        variant="soft",
+                        variant="difficulty",
                     ),
-                    rx.heading(
+                    title_text(
                         title,
                         size="5",
                         line_height="1.1",
                     ),
-                    muted_text(
+                    secondary_text(
                         artist,
                         size="3",
                     ),
                     spacing="1",
-                    align="start",
-                    width="100%",
                 ),
-                spacing="4",
-                align="start",
-                width="100%",
             ),
             padding={
                 "base": "0.75rem",
@@ -71,34 +65,16 @@ def song_card(
             hoverable=True,
         ),
         href=song_detail_route(slug),
-        width="100%",
-        text_decoration="none",
     )
 
 
 def featured_songs() -> rx.Component:
-    return rx.vstack(
-        rx.vstack(
-            rx.heading(
-                "Canciones destacadas",
-                size={
-                    "base": "5",
-                    "md": "7",
-                },
-                text_align="center",
-                width="100%",
-            ),
-            muted_text(
-                "Aprende algunos de los riffs y canciones más icónicos.",
-                size="4",
-                text_align="center",
-                max_width="32ch",
-            ),
-            spacing="3",
-            align="center",
-            width="100%",
+    return stack_section(
+        section_header(
+            "Canciones destacadas",
+            "Aprende algunos de los riffs y canciones más icónicos.",
         ),
-        rx.grid(
+        responsive_grid(
             rx.foreach(
                 get_featured_songs(),
                 lambda song: song_card(
@@ -109,20 +85,8 @@ def featured_songs() -> rx.Component:
                     song.slug,
                 ),
             ),
-            columns={
-                "base": "1",
-                "md": "2",
-                "lg": "3",
-            },
-            spacing="6",
-            width="100%",
         ),
-        spacing="7",
-        width="100%",
-        padding_y={
-            "base": "1rem",
-            "lg": "2rem",
-        },
+        padding_y=SECTION_PADDING_Y,
         margin_top={
             "base": "1.5rem",
             "lg": "0",

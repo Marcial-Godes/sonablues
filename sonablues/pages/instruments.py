@@ -1,126 +1,103 @@
 import reflex as rx
-
 from sonablues.components.layouts import base_layout
-from sonablues.styles.spacing import(
-    SMALL_GAP,
-    LARGE_GAP,
-    SECTION_GAP
+from sonablues.styles.tokens import (
+    INSTRUMENT_CARD_MIN_HEIGHT,
+    CARD_PADDING_LARGE,
     )
+from sonablues.components.ui.card_link import (
+    card_link,
+)
+from sonablues.styles.spacing import (
+    SMALL_GAP,
+    SECTION_GAP,
+)
+from sonablues.components.ui.surface import (
+    surface,
+)
+from sonablues.components.ui.responsive_grid import (
+    responsive_grid,
+)
+from sonablues.components.ui.stacks import (
+    stack_start,
+    stack_section,
+)
+from sonablues.components.ui.text import (
+    title_text,
+    secondary_text,
+)
 
 
+def instrument_card(
+    title: str,
+    description: str,
+    href: str,
+) -> rx.Component:
+
+    return card_link(
+
+        surface(
+
+            stack_start(
+
+                title_text(
+                    title,
+                    size="6",
+                ),
+
+                secondary_text(
+                    description,
+                ),
+
+                spacing=SMALL_GAP,
+            ),
+
+            padding=CARD_PADDING_LARGE,
+
+            min_height=INSTRUMENT_CARD_MIN_HEIGHT,
+
+            hoverable=True,
+        ),
+
+        href=href,
+    )
+    
+    
 def instruments_page() -> rx.Component:
 
     return base_layout(
 
-        rx.vstack(
+        stack_section(
 
-            rx.heading(
+            title_text(
                 "Explorar",
                 size="9",
             ),
 
-            rx.text(
+            secondary_text(
                 "Selecciona instrumento.",
-                color="#8A9AA8",
                 size="4",
             ),
 
-            rx.grid(
+            responsive_grid(
 
-                rx.link(
-
-                    rx.box(
-
-                        rx.vstack(
-
-                            rx.heading(
-                                "Guitarra eléctrica",
-                                size="6",
-                            ),
-
-                            rx.text(
-                                "Blues, rock y fraseo eléctrico.",
-                                color="#8A9AA8",
-                            ),
-
-                            spacing=SMALL_GAP,
-                            align="start",
-                        ),
-
-                        background="#27313B",
-
-                        border="1px solid #506070",
-
-                        border_radius="18px",
-
-                        padding="2rem",
-
-                        min_height="220px",
-
-                        _hover={
-                            "border": "1px solid #D9D7D1",
-                        },
-                    ),
-
-                    href="/artists/electric",
-
-                    text_decoration="none",
+                instrument_card(
+                    "Guitarra eléctrica",
+                    "Blues, rock y fraseo eléctrico.",
+                    "/artists/electric",
                 ),
 
-                rx.link(
-
-                    rx.box(
-
-                        rx.vstack(
-
-                            rx.heading(
-                                "Guitarra acústica",
-                                size="6",
-                            ),
-
-                            rx.text(
-                                "Fingerstyle y dinámica acústica.",
-                                color="#8A9AA8",
-                            ),
-
-                            spacing=SMALL_GAP,
-                            align="start",
-                        ),
-
-                        background="#27313B",
-
-                        border="1px solid #506070",
-
-                        border_radius="18px",
-
-                        padding="2rem",
-
-                        min_height="220px",
-
-                        _hover={
-                            "border": "1px solid #D9D7D1",
-                        },
-                    ),
-
-                    href="/artists/acoustic",
-
-                    text_decoration="none",
+                instrument_card(
+                    "Guitarra acústica",
+                    "Fingerstyle y dinámica acústica.",
+                    "/artists/acoustic",
                 ),
 
                 columns={
                     "base": "1",
                     "md": "2",
                 },
-
-                spacing=LARGE_GAP,
-
-                width="100%",
             ),
 
             spacing=SECTION_GAP,
-
-            align="start",
-
-            width="100%",
         )
     )

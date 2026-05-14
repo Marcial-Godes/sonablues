@@ -11,6 +11,9 @@ from sonablues.components.home.learning_section import (
 from sonablues.components.home.featured_songs import (
     featured_songs,
 )
+from sonablues.styles.tokens import (
+    SECTION_PADDING_Y,
+    )
 
 
 def home_page() -> rx.Component:
@@ -27,9 +30,6 @@ def home_page() -> rx.Component:
 
             align="stretch",
 
-            padding_x={
-                "base": "1rem",
-                "md": "2rem",
-            },
+            padding_x=SECTION_PADDING_Y,
         )
     )

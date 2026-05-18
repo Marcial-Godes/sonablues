@@ -1,98 +1,78 @@
 import reflex as rx
-
-from sonablues.components.layouts import (
+from sonablues.components.base_layout import (
     base_layout,
 )
-
+from sonablues.components.layout import (
+    page_container,
+)
 from sonablues.components.ui import (
     page_title,
-    muted_text,
+    secondary_text,
     surface,
+    stack_start,
+    stack_section,
+    title_text,
+    body_text,
+    label_text,
 )
-
 from sonablues.states.auth_state import (
     AuthState,
 )
-
 from sonablues.utils.protected import (
     protected_page,
 )
-
-from sonablues.styles.spacing import (
-    LARGE_GAP,
+from sonablues.styles.tokens import (
+    TITLE_SIZE_SECTION,
+    CONTENT_GAP,
+    SECTION_GAP,
 )
 
 
+
 def profile_content() -> rx.Component:
-
-    return rx.vstack(
-
-        page_title(
-            "Profile",
-        ),
-
-        muted_text(
-            f"Welcome back, {AuthState.current_user}",
-        ),
-
-        surface(
-
-            rx.vstack(
-
-                rx.heading(
-                    "Account Overview",
-                    size="5",
+    return page_container(
+        stack_section(
+            page_title(
+                "Profile",
                 ),
-
-                muted_text(
-                    (
-                        "Your personal dashboard will appear here "
-                        "in future updates."
+            secondary_text(
+                f"Welcome back, {AuthState.current_user}",
+                ),
+            surface(
+                stack_start(
+                    title_text(
+                        "Account Overview",
+                        size=TITLE_SIZE_SECTION,
+                        ),
+                    secondary_text(
+                        (
+                            "Your personal dashboard will appear here "
+                            "in future updates."
+                        ),
+                    ),
+                    rx.divider(),
+                    stack_start(
+                        label_text(
+                            "Planned features:",
+                        ),
+                        body_text("• Learning progress"),
+                        body_text("• Recently viewed lessons"),
+                        body_text("• Practice history"),
+                        body_text("• Custom playlists"),
+                        body_text("• Personal notes"),
+                        spacing=CONTENT_GAP,
                     ),
                 ),
-
-                rx.divider(),
-
-                rx.vstack(
-
-                    rx.text(
-                        "Planned features:",
-                        weight="bold",
-                    ),
-
-                    rx.text("• Learning progress"),
-
-                    rx.text("• Recently viewed lessons"),
-
-                    rx.text("• Practice history"),
-
-                    rx.text("• Custom playlists"),
-
-                    rx.text("• Personal notes"),
-
-                    spacing="2",
-                    align="start",
-                    width="100%",
-                ),
-
-                spacing=LARGE_GAP,
-                align="start",
                 width="100%",
             ),
-
+            spacing=SECTION_GAP,
+            align="start",
             width="100%",
-        ),
-
-        spacing=LARGE_GAP,
-        align="start",
-        width="100%",
+        )
     )
 
-
 def profile_page() -> rx.Component:
-
     return base_layout(
-
         protected_page(
             profile_content(),
         )

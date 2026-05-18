@@ -1,42 +1,34 @@
 import reflex as rx
-
 from sonablues.constants import (
     PLANNED_CONTENT_TITLE,
 )
-
 from sonablues.components.ui import (
     surface,
     content_section,
+    stack_start,
+    body_text,
 )
-
-from sonablues.styles.spacing import (
-    SMALL_GAP,
+from sonablues.styles.tokens import (
+    CARD_PADDING,
+    CONTENT_GAP
 )
 
 
 def planned_content() -> rx.Component:
-
     return content_section(
-
         PLANNED_CONTENT_TITLE,
-
+        "Contenido adicional planeado para cada lección.",
         surface(
-
-            rx.vstack(
-
-                rx.text("• Tabs sincronizadas"),
-                rx.text("• Vídeo paso a paso"),
-                rx.text("• Backing track"),
-                rx.text("• Loop de práctica"),
-                rx.text("• Sección técnica detallada"),
-
-                spacing=SMALL_GAP,
-                align="start",
+            stack_start(
+                body_text("• Tabs sincronizadas"),
+                body_text("• Vídeo paso a paso"),
+                body_text("• Backing track"),
+                body_text("• Loop de práctica"),
+                body_text("• Sección técnica detallada"),
+                spacing=CONTENT_GAP,
             ),
-
             width="100%",
-            max_width="700px",
-
-            padding="2rem",
+            padding=CARD_PADDING,
         ),
     )
+    

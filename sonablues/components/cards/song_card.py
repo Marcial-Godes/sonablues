@@ -6,7 +6,7 @@ from sonablues.data.models.song_model import (
     Song,
 )
 from sonablues.components.ui import (
-    surface,
+    media_card,
     cover_image,
     badge_group,
     app_badge,
@@ -16,58 +16,55 @@ from sonablues.components.ui import (
     stack_section,
     title_text,
 )
-from sonablues.styles.spacing import (
-    EXTRA_SMALL_GAP,
-    SMALL_GAP,
-)
 from sonablues.styles.tokens import (
-    SONG_CARD_IMAGE_HEIGHT,
+    CARD_IMAGE_HEIGHT_MD,
+    SONG_CARD_MIN_HEIGHT,
+    TITLE_SIZE_CARD,
+    INLINE_GAP,
+    CONTENT_GAP,
 )
 
 
 def song_card(
     song: Song,
 ) -> rx.Component:
-    return surface(
-        stack_section(
-            card_link(
-                stack_section(
-                    cover_image(
-                        src=song.image,
-                        height=SONG_CARD_IMAGE_HEIGHT,
-                    ),
-                    stack_start(
-                        title_text(
-                            song.title,
-                            size="5",
-                        ),
-                        
-                        rx.hstack(
-                            app_badge(
-                                song.difficulty,
-                                variant="difficulty",
-                            ),
-                            app_badge(
-                                song.tuning,
-                            ),
-                            spacing=EXTRA_SMALL_GAP,
-                            wrap="wrap",
-                        ),
-                        badge_group(
-                            song.techniques,
-                            size="1",
-                        ),
-                        spacing=SMALL_GAP,
-                    ),
+    return stack_section(
+        card_link(
+            media_card(
+                cover_image(
+                    src=song.image,
+                    height=CARD_IMAGE_HEIGHT_MD,
                 ),
-                href=song_detail_route(
-                    song.slug,
+                stack_start(
+                    title_text(
+                        song.title,
+                        size=TITLE_SIZE_CARD,
+                    ),
+                    rx.hstack(
+                        app_badge(
+                            song.difficulty,
+                            variant="difficulty",
+                        ),
+                        app_badge(
+                            song.tuning,
+                        ),
+                        spacing=INLINE_GAP,
+                        wrap="wrap",
+                    ),
+                    badge_group(
+                        song.techniques,
+                        size="1",
+                    ),
+                    spacing=CONTENT_GAP,
                 ),
+                min_height=SONG_CARD_MIN_HEIGHT,
             ),
-            favorite_button(
+            href=song_detail_route(
                 song.slug,
             ),
         ),
-        width="100%",
-        hoverable=True,
+        favorite_button(
+            song.slug,
+        ),
+        spacing=CONTENT_GAP,
     )

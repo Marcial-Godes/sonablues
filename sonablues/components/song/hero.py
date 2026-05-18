@@ -9,17 +9,15 @@ from sonablues.components.ui import (
     stack_start,
     stack_section,
 )
-from sonablues.styles.sizes import (
-    CONTENT_WIDTH,
-)
-from sonablues.styles.spacing import (
-    SMALL_GAP,
-    LARGE_GAP,
-    PAGE_GAP,
-)
 from sonablues.styles.tokens import (
     SONG_HERO_IMAGE_HEIGHT,
-    )
+    SECTION_TEXT_WIDTH,
+    BADGE_SIZE,
+    TEXT_SIZE_BODY,
+    INLINE_GAP,
+    CONTENT_GAP,
+    SECTION_GAP,
+)
 
 
 def song_hero(
@@ -29,7 +27,6 @@ def song_hero(
         cover_image(
             src=song.image,
             height=SONG_HERO_IMAGE_HEIGHT,
-            max_width=CONTENT_WIDTH,
         ),
         stack_start(
             page_title(
@@ -39,17 +36,17 @@ def song_hero(
                 app_badge(
                     song.difficulty,
                     variant="difficulty",
-                    size="3",
+                    size=BADGE_SIZE,
                 ),
                 app_badge(
                     song.tuning,
-                    size="3",
+                    size=BADGE_SIZE,
                 ),
-                spacing=SMALL_GAP,
+                spacing=INLINE_GAP,
             ),
             badge_group(
                 song.techniques,
-                size="3",
+                size=BADGE_SIZE,
             ),
             secondary_text(
                 (
@@ -57,10 +54,10 @@ def song_hero(
                     "control expresivo, vibrato "
                     "y musicalidad moderna."
                 ),
-                size="5",
-                max_width="800px",
+                size=TEXT_SIZE_BODY,
+                max_width=SECTION_TEXT_WIDTH,
             ),
-            spacing=LARGE_GAP,
+            spacing=CONTENT_GAP,
         ),
-        spacing=PAGE_GAP,
+        spacing=SECTION_GAP,
     )

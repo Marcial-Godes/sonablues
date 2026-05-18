@@ -22,19 +22,42 @@ C:\Users\mazin\Desktop\Python\sonablues\requirements.txt
 C:\Users\mazin\Desktop\Python\sonablues\rxconfig.py
 
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\cards\artist_card.py
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\cards\featured_song_card.py
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\cards\featured_song_card.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\cards\song_card.py
+
 
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\home\featured_songs.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\home\home_hero.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\home\learning_section.py
 
+
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\layout\__init__.py
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\layout\content_container.py
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\layout\page_container.py
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\layout\section_container.py
+
+
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\navbar\__init__.py
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\navbar\navbar.py
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\navbar\nav_link.py
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\navbar\desktop_navigation.py
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\navbar\desktop_user.py
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\navbar\mobile_menu.py
+
+
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\search__init__.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\search\song_search_input.py
+
 
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\song\__init__.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\song\hero.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\song\video_section.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\song\planned_content.py
+
+
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\song\content\song_content.py
+
 
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\__init__.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\app_badge.py
@@ -45,6 +68,7 @@ C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\content_section.
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\cover_image.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\empty_state.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\favorite_button.py
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\media_card.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\muted_text.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\page_title.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\responsive_grid.py
@@ -53,11 +77,11 @@ C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\section_title.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\stacks.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\surface.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\text.py
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\video_embed.py
 
 
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\footer.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\layouts.py
-C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\navbar.py
 
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\data\models\artist_model.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\data\models\difficulty.py
@@ -104,7 +128,6 @@ C:\Users\mazin\Desktop\Python\sonablues\sonablues\states\song_search_state.py
 
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\styles\layout.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\styles\radius.py
-C:\Users\mazin\Desktop\Python\sonablues\sonablues\styles\sizes.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\styles\spacing.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\styles\theme.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\styles\transitions.py

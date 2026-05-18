@@ -9,12 +9,15 @@ from sonablues.routes import (
     ELECTRIC_ARTISTS_ROUTE,
     PROFILE_ROUTE,
 )
-from sonablues.styles.spacing import LARGE_GAP
 from sonablues.styles.theme import BORDER_COLOR
 from sonablues.styles.tokens import (
-    SECTION_PADDING_Y,
     SECTION_PADDING_TOP,
     SECTION_PADDING_BOTTOM,
+    HOME_HERO_MOBILE_IMAGE_HEIGHT,
+    HOME_HERO_DESKTOP_IMAGE_HEIGHT,
+    HOME_HERO_TEXT_MAX_WIDTH,
+    HOME_HERO_TEXT_MIN_WIDTH,
+    SECTION_GAP,
 )
 from sonablues.components.ui.cover_image import (
     cover_image,
@@ -67,10 +70,7 @@ def hero_text() -> rx.Component:
             },
             gap="2",
         ),
-        spacing={
-            "base": "5",
-            "sm": LARGE_GAP,
-        },
+        spacing=SECTION_GAP,
     )
 
 
@@ -90,11 +90,10 @@ def hero_image(height) -> rx.Component:
 def home_hero() -> rx.Component:
     mobile_layout = rx.vstack(
         hero_text(),
-        hero_image({
-            "base": "240px",
-            "sm": "280px",
-        }),
-        spacing="7",
+        hero_image(
+            HOME_HERO_MOBILE_IMAGE_HEIGHT,
+        ),
+        spacing=SECTION_GAP,
         width="100%",
         align="stretch",
         padding_top=SECTION_PADDING_TOP,
@@ -103,11 +102,13 @@ def home_hero() -> rx.Component:
         rx.box(
             hero_text(),
             flex="1",
-            min_width="420px",
-            max_width="560px",
+            min_width=HOME_HERO_TEXT_MIN_WIDTH,
+            max_width=HOME_HERO_TEXT_MAX_WIDTH,
         ),
         rx.box(
-            hero_image("620px"),
+            hero_image(
+                HOME_HERO_DESKTOP_IMAGE_HEIGHT,
+            ),
             flex="1.4",
         ),
         direction="row",
@@ -123,6 +124,5 @@ def home_hero() -> rx.Component:
             desktop_layout,
         ),
         width="100%",
-        margin_top=SECTION_PADDING_Y,
         padding_bottom=SECTION_PADDING_BOTTOM,
     )

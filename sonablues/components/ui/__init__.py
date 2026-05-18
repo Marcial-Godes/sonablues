@@ -1,9 +1,6 @@
 from .badge_group import (
     badge_group,
 )
-from .content_section import (
-    content_section,
-)
 from .cover_image import (
     cover_image,
 )
@@ -13,14 +10,8 @@ from .card_link import (
 from .empty_state import (
     empty_state,
 )
-from .muted_text import (
-    muted_text,
-)
 from .page_title import (
     page_title,
-)
-from .section_title import (
-    section_title,
 )
 from .surface import (
     surface,
@@ -45,7 +36,16 @@ from .text import (
     title_text,
     body_text,
     secondary_text,
+    caption_text,
+    label_text,
 )
 from .app_button import (
     app_button,
+)
+from .content_section import content_section
+from .video_embed import (
+    video_embed,
+)
+from .media_card import (
+    media_card,
 )

@@ -38,7 +38,7 @@ SONGS: dict[str, list[Song]] = {
                 ),
             ],
 
-            image="/images/songs/joe-bonamassa/sloe-gin.png",
+            image="/images/songs/john-mayer/slow-dancing-in-a-burning-room.webp",
         ),
 
         Song(
@@ -61,7 +61,7 @@ SONGS: dict[str, list[Song]] = {
                     youtube_id="k47-9KNlFY4",
                 ),
             ],
-            image="/images/songs/joe-bonamassa/spanish-boots.png",
+            image="/images/songs/john-mayer/slow-dancing-in-a-burning-room.webp",
         ),
     ],
 
@@ -86,7 +86,7 @@ SONGS: dict[str, list[Song]] = {
                 ),
             ],
 
-            image="/images/songs/john-mayer/slow-dancing-in-a-burning-room.png",
+            image="/images/songs/john-mayer/slow-dancing-in-a-burning-room.webp",
         ),
 
         Song(
@@ -108,7 +108,7 @@ SONGS: dict[str, list[Song]] = {
                 ),
             ],
 
-            image="/images/songs/john-mayer/gravity.png",
+            image="/images/songs/john-mayer/slow-dancing-in-a-burning-room.webp",
         ),
     ],
 
@@ -134,7 +134,7 @@ SONGS: dict[str, list[Song]] = {
                 ),
             ],
 
-            image="/images/songs/jimi-hendrix/little-wing.png",
+            image="/images/songs/john-mayer/slow-dancing-in-a-burning-room.webp",
         ),
     ],
 
@@ -159,7 +159,7 @@ SONGS: dict[str, list[Song]] = {
                 ),
             ],
 
-            image="/images/songs/stevie-ray-vaughan/pride-and-joy.png",
+            image="/images/songs/stevie-ray-vaughan/pride-and-joy.webp",
         ),
     ],
 
@@ -184,7 +184,7 @@ SONGS: dict[str, list[Song]] = {
                 ),
             ],
 
-            image="/images/songs/tommy-emmanuel/angelina.png",
+            image="/images/songs/tommy-emmanuel/angelina.webp",
         ),
     ],
 }

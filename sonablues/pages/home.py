@@ -1,5 +1,5 @@
 import reflex as rx
-from sonablues.components.layouts import (
+from sonablues.components.base_layout import (
     base_layout,
 )
 from sonablues.components.home.home_hero import (
@@ -11,25 +11,22 @@ from sonablues.components.home.learning_section import (
 from sonablues.components.home.featured_songs import (
     featured_songs,
 )
-from sonablues.styles.tokens import (
-    SECTION_PADDING_Y,
-    )
+from sonablues.components.layout import (
+    page_container,
+)
+from sonablues.components.ui import (
+    stack_section,
+)
 
 
 def home_page() -> rx.Component:
-
     return base_layout(
-        rx.vstack(
-            home_hero(),
-            learning_section(),
-            featured_songs(),
-
-            spacing="8",
-
-            width="100%",
-
-            align="stretch",
-
-            padding_x=SECTION_PADDING_Y,
+        page_container(
+            stack_section(
+                home_hero(),
+                learning_section(),
+                featured_songs(),
+                align="stretch",
+            )
         )
     )

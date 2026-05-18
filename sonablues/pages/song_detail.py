@@ -2,23 +2,18 @@ import reflex as rx
 from sonablues.constants import (
     SONG_NOT_FOUND,
 )
-from sonablues.components.layouts import (
+from sonablues.components.base_layout import (
     base_layout,
 )
 from sonablues.components.song import (
     song_hero,
-    song_video_section,
-    planned_content,
+    song_content,
 )
 from sonablues.components.ui import (
     empty_state,
-    favorite_button,
 )
 from sonablues.services import (
     get_song,
-)
-from sonablues.styles.spacing import (
-    PAGE_GAP,
 )
 
 
@@ -39,13 +34,8 @@ def song_detail_page(
     return base_layout(
         rx.vstack(
             song_hero(song),
-            favorite_button(
-                song.slug,
-            ),
-            song_video_section(song),
-            planned_content(),
-            spacing=PAGE_GAP,
-            align="start",
+            song_content(song),
             width="100%",
         )
     )
+    

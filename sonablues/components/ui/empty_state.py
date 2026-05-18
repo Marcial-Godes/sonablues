@@ -1,12 +1,15 @@
 import reflex as rx
+
 from sonablues.components.ui.page_title import (
     page_title,
 )
-from sonablues.components.ui.muted_text import (
-    muted_text,
+
+from sonablues.components.ui.text import (
+    secondary_text,
 )
-from sonablues.styles.spacing import (
-    SMALL_GAP,
+
+from sonablues.styles.tokens import (
+    CONTENT_GAP,
 )
 
 
@@ -16,15 +19,17 @@ def empty_state(
 ) -> rx.Component:
     return rx.vstack(
         page_title(title),
+
         rx.cond(
             description is not None,
-            muted_text(
+            secondary_text(
                 description,
                 text_align="center",
                 max_width="600px",
             ),
         ),
-        spacing=SMALL_GAP,
+
+        spacing=CONTENT_GAP,
         align="center",
         width="100%",
         padding_top="4rem",

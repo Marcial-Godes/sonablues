@@ -1,59 +1,48 @@
 import reflex as rx
-
 from sonablues.styles.theme import (
     CARD_COLOR,
     BORDER_COLOR,
-    TEXT_COLOR,
-    MUTED_TEXT,
+)
+from sonablues.components.ui import (
+    label_text,
+    caption_text,
+    stack_start,
+)
+from sonablues.styles.tokens import (
+    INLINE_GAP,
+    CONTENT_GAP,
+    FOOTER_PADDING_Y,
+    FOOTER_PADDING_X,
 )
 
 
 def footer() -> rx.Component:
-
     return rx.flex(
-
-        rx.vstack(
-
-            rx.text(
-                "Sonablues",
-                color=TEXT_COLOR,
-                weight="bold",
-            ),
-            rx.text(
+        stack_start(
+            label_text(
+            "Sonablues",
+        ),
+            caption_text(
                 "Modern blues guitar platform",
-                color=MUTED_TEXT,
-                size="2",
             ),
-            spacing="1",
-            align="start",
+            spacing=INLINE_GAP,
         ),
         rx.spacer(),
-        rx.text(
+        caption_text(
             "Made by Marcial",
-            color=MUTED_TEXT,
-            size="2",
         ),
-
         direction={
             "base": "column",
             "sm": "row",
         },
-
-        gap="4",
-
+        gap=CONTENT_GAP,
         align={
             "base": "start",
             "sm": "center",
         },
-
         width="100%",
-
-        padding={
-            "base": "1rem",
-            "md": "1.5rem 2rem",
-        },
-
+        padding_y=FOOTER_PADDING_Y,
+        padding_x=FOOTER_PADDING_X,
         background_color=CARD_COLOR,
-
         border_top=f"1px solid {BORDER_COLOR}",
     )

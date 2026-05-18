@@ -1,20 +1,26 @@
 import reflex as rx
-from sonablues.components.ui.section_title import (
-    section_title,
+
+from sonablues.components.ui.section_header import (
+    section_header,
 )
-from sonablues.styles.spacing import (
-    LARGE_GAP,
+
+from sonablues.components.ui.stacks import (
+    stack_section,
 )
 
 
 def content_section(
     title: str,
+    description: str,
     *children,
+    **props,
 ) -> rx.Component:
-    return rx.vstack(
-        section_title(title),
+    return stack_section(
+        section_header(
+            title,
+            description,
+        ),
         *children,
-        spacing=LARGE_GAP,
-        align="start",
         width="100%",
+        **props,
     )

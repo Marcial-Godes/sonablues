@@ -1,13 +1,15 @@
 import reflex as rx
-from sonablues.components.ui import (
-    muted_text,
+from .text import (
+    title_text,
+    secondary_text,
 )
-from sonablues.styles.spacing import (
-    SMALL_GAP,
+from .stacks import (
+    stack_start,
 )
 from sonablues.styles.tokens import (
     SECTION_TEXT_WIDTH,
-    SECTION_MAX_WIDTH
+    SECTION_MAX_WIDTH,
+    TITLE_SIZE_SECTION,
 )
 
 
@@ -16,23 +18,17 @@ def section_header(
     description: str,
     max_width: str = SECTION_MAX_WIDTH,
 ) -> rx.Component:
-    return rx.vstack(
-        rx.heading(
+    return stack_start(
+        title_text(
             title,
-            size={
-                "base": "5",
-                "md": "7",
-            },
+            size=TITLE_SIZE_SECTION,
             text_align="center",
-            width="100%",
         ),
-        muted_text(
+        secondary_text(
             description,
-            size="4",
             text_align="center",
             max_width=SECTION_TEXT_WIDTH,
         ),
-        spacing=SMALL_GAP,
         align="center",
         width="100%",
         max_width=max_width,

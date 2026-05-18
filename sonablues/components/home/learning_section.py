@@ -10,8 +10,11 @@ from sonablues.components.ui import (
 )
 from sonablues.styles.tokens import (
     LEARNING_ICON_SIZE,
-    SECTION_PADDING_Y,
-    )
+    CARD_PADDING,
+    CONTENT_GAP,
+    TITLE_SIZE_CARD,
+    TEXT_SIZE_SECONDARY,
+)
 
 
 def learning_card(
@@ -29,15 +32,15 @@ def learning_card(
             ),
             title_text(
                 title,
-                size="5",
+                size=TITLE_SIZE_CARD,
             ),
             secondary_text(
                 description,
-                size="3",
+                size=TEXT_SIZE_SECONDARY,
             ),
-            spacing="3",
+            spacing=CONTENT_GAP,
         ),
-        padding="1.5rem",
+        padding=CARD_PADDING,
         width="100%",
         hoverable=True,
     )
@@ -65,6 +68,5 @@ def learning_section() -> rx.Component:
                 "Técnicas reales",
                 "Mejora bends, vibrato, dinámica y phrasing.",
             ),
-        ),
-        padding_y=SECTION_PADDING_Y,
+        )
     )

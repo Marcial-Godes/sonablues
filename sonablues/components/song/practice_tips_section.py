@@ -3,11 +3,7 @@ import reflex as rx
 from sonablues.components.ui import (
     content_section,
     section_card,
-)
-
-from sonablues.styles.tokens import (
-    LIST_SPACING,
-    LIST_PADDING_LEFT,
+    content_list,
 )
 
 
@@ -27,15 +23,11 @@ def practice_tips_section() -> rx.Component:
             "01",
             "Consejos de práctica",
 
-            rx.unordered_list(
+            content_list(
                 *[
-                    rx.list_item(
-                        tip,
-                    )
+                    rx.list_item(tip)
                     for tip in tips
                 ],
-                spacing=LIST_SPACING,
-                padding_left=LIST_PADDING_LEFT,
             ),
         ),
     )

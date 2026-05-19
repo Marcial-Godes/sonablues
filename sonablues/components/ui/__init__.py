@@ -65,3 +65,6 @@ from .content_card import (
 from .section_card import (
     section_card,
 )
+from .content_list import (
+    content_list,
+)

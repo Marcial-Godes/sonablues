@@ -7,11 +7,7 @@ from sonablues.constants import (
 from sonablues.components.ui import (
     content_section,
     section_card,
-)
-
-from sonablues.styles.tokens import (
-    LIST_SPACING,
-    LIST_PADDING_LEFT,
+    content_list,
 )
 
 
@@ -24,15 +20,12 @@ def planned_content() -> rx.Component:
             "01",
             "Contenido incluido",
 
-            rx.unordered_list(
+            content_list(
                 rx.list_item("Tabs sincronizadas"),
                 rx.list_item("Vídeo paso a paso"),
                 rx.list_item("Backing track"),
                 rx.list_item("Loop de práctica"),
                 rx.list_item("Sección técnica detallada"),
-
-                spacing=LIST_SPACING,
-                padding_left=LIST_PADDING_LEFT,
             ),
         ),
     )

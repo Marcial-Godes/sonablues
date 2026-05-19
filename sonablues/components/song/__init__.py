@@ -4,3 +4,6 @@ from .planned_content import planned_content
 from .content.song_content import (
     song_content,
 )
+from .practice_tips_section import (
+    practice_tips_section,
+)

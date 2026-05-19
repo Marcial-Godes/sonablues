@@ -11,6 +11,7 @@ from sonablues.components.layout import (
 from sonablues.components.song import (
     song_hero,
     song_content,
+    practice_tips_section,
 )
 from sonablues.components.ui import (
     empty_state,
@@ -43,6 +44,7 @@ def song_detail_page(
             rx.vstack(
                 song_hero(song),
                 song_content(song),
+                practice_tips_section(),
                 width="100%",
                 spacing=PAGE_GAP,
                 align="start",

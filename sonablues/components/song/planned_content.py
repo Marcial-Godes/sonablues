@@ -3,13 +3,12 @@ from sonablues.constants import (
     PLANNED_CONTENT_TITLE,
 )
 from sonablues.components.ui import (
-    surface,
     content_section,
+    content_card,
     stack_start,
-    body_text,
+    section_row,
 )
 from sonablues.styles.tokens import (
-    CARD_PADDING,
     CONTENT_GAP
 )
 
@@ -18,18 +17,27 @@ def planned_content() -> rx.Component:
     return content_section(
         PLANNED_CONTENT_TITLE,
         "Contenido adicional planeado para cada lección.",
-        surface(
+
+        content_card(
             stack_start(
-                body_text("• Tabs sincronizadas"),
-                body_text("• Vídeo paso a paso"),
-                body_text("• Backing track"),
-                body_text("• Loop de práctica"),
-                body_text("• Sección técnica detallada"),
+                section_row(
+                    badge="01",
+                    title="Contenido incluido",
+                ),
+
+                rx.unordered_list(
+                    rx.list_item("Tabs sincronizadas"),
+                    rx.list_item("Vídeo paso a paso"),
+                    rx.list_item("Backing track"),
+                    rx.list_item("Loop de práctica"),
+                    rx.list_item("Sección técnica detallada"),
+
+                    spacing="3",
+                    padding_left="1.25rem",
+                ),
+
                 spacing=CONTENT_GAP,
+                width="100%",
             ),
-            width="100%",
-            padding=CARD_PADDING,
-            min_height="unset",
         ),
     )
-    

@@ -62,3 +62,6 @@ from .media_container import (
 from .content_card import (
     content_card,
 )
+from .section_card import (
+    section_card,
+)

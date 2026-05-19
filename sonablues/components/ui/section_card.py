@@ -23,12 +23,8 @@ def section_card(
                 badge=badge,
                 title=title,
             ),
-
             *children,
-
             spacing=CONTENT_GAP,
-            width="100%",
-
             **props,
         ),
     )

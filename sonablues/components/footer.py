@@ -40,7 +40,6 @@ def footer() -> rx.Component:
             "base": "start",
             "sm": "center",
         },
-        width="100%",
         padding_y=FOOTER_PADDING_Y,
         padding_x=FOOTER_PADDING_X,
         background_color=CARD_COLOR,

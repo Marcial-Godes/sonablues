@@ -18,13 +18,13 @@ from sonablues.components.ui import (
     page_title,
     empty_state,
     responsive_grid,
-    stack_section,
+    content_stack,
 )
 
 
 def favorites_content() -> rx.Component:
     return page_container(
-        stack_section(
+        content_stack(
             page_title(
                 "Favorite Songs",
             ),
@@ -43,7 +43,6 @@ def favorites_content() -> rx.Component:
                     ),
                 ),
             ),
-            align="stretch",
         )
     )
 

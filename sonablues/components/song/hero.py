@@ -7,7 +7,7 @@ from sonablues.components.ui import (
     cover_image,
     app_badge,
     stack_start,
-    stack_section,
+    content_stack,
 )
 from sonablues.styles.tokens import (
     SONG_HERO_IMAGE_HEIGHT,
@@ -22,7 +22,7 @@ from sonablues.styles.tokens import (
 def song_hero(
     song: Song,
 ) -> rx.Component:
-    return stack_section(
+    return content_stack(
         cover_image(
             src=song.image,
             height="240px",
@@ -63,9 +63,7 @@ def song_hero(
                 size=TEXT_SIZE_BODY,
                 max_width=SECTION_TEXT_WIDTH,
             ),
-
             spacing=CONTENT_GAP,
         ),
-
         spacing=CONTENT_GAP,
     )

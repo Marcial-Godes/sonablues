@@ -3,7 +3,7 @@ from sonablues.components.ui.surface import (
     surface,
 )
 from sonablues.components.ui.stacks import (
-    stack_section,
+    content_stack,
 )
 
 
@@ -15,12 +15,11 @@ def media_card(
     **props,
 ) -> rx.Component:
     return surface(
-        stack_section(
+        content_stack(
             media,
             *content,
             spacing=spacing,
         ),
-        width="100%",
         hoverable=hoverable,
         **props,
     )

@@ -10,7 +10,7 @@ from sonablues.components.ui import (
     secondary_text,
     surface,
     stack_start,
-    stack_section,
+    content_stack,
     title_text,
     body_text,
     label_text,
@@ -31,7 +31,7 @@ from sonablues.styles.tokens import (
 
 def profile_content() -> rx.Component:
     return page_container(
-        stack_section(
+        content_stack(
             page_title(
                 "Profile",
                 ),
@@ -63,11 +63,7 @@ def profile_content() -> rx.Component:
                         spacing=CONTENT_GAP,
                     ),
                 ),
-                width="100%",
             ),
-            spacing=SECTION_GAP,
-            align="start",
-            width="100%",
         )
     )
 

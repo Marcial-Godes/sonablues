@@ -31,8 +31,5 @@ def page_header(
                 description,
             ),
         ),
-
-        align="start",
-        width="100%",
         **props,
     )

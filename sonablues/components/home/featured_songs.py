@@ -11,12 +11,12 @@ from sonablues.components.cards import (
 from sonablues.components.ui import (
     section_header,
     responsive_grid,
-    stack_section,
+    content_stack,
 )
 
 
 def featured_songs() -> rx.Component:
-    return stack_section(
+    return content_stack(
         section_header(
             "Canciones destacadas",
             "Aprende algunos de los riffs y canciones más icónicos.",

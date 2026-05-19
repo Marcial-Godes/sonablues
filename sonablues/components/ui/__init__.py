@@ -30,7 +30,7 @@ from .app_badge import (
 )
 from .stacks import (
     stack_start,
-    stack_section,
+    content_stack,
 )
 from .text import (
     title_text,

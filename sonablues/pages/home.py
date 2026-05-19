@@ -15,18 +15,17 @@ from sonablues.components.layout import (
     page_container,
 )
 from sonablues.components.ui import (
-    stack_section,
+    content_stack,
 )
 
 
 def home_page() -> rx.Component:
     return base_layout(
         page_container(
-            stack_section(
+            content_stack(
                 home_hero(),
                 learning_section(),
                 featured_songs(),
-                align="stretch",
             )
         )
     )

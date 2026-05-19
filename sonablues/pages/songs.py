@@ -14,7 +14,7 @@ from sonablues.components.search import (
 from sonablues.components.ui import (
     empty_state,
     responsive_grid,
-    stack_section,
+    content_stack,
     page_header,
 )
 from sonablues.services.song_service import (
@@ -40,7 +40,7 @@ def songs_page(
     )
     return base_layout(
         page_container(
-            stack_section(
+            content_stack(
                 page_header(
                     title=artist.name,
                     description=artist.description,
@@ -52,7 +52,6 @@ def songs_page(
                         for song in songs
                     ],
                 ),
-                align="stretch",
             )
         )
     )

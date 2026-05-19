@@ -70,14 +70,11 @@ def song_card(
                         song.techniques,
                         size="1",
                     ),
-
                     spacing=CONTENT_GAP,
                 ),
-
                 min_height=SONG_CARD_MIN_HEIGHT,
                 position="relative",
             ),
-
             href=song_detail_route(
                 song.slug,
             ),

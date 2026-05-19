@@ -30,7 +30,6 @@ def section_header(
             max_width=SECTION_TEXT_WIDTH,
         ),
         align="center",
-        width="100%",
         max_width=max_width,
         margin_x="auto",
         padding_x="1rem",

@@ -17,7 +17,7 @@ from sonablues.services.artist_service import (
 from sonablues.components.ui import (
     page_title,
     responsive_grid,
-    stack_section,
+    content_stack,
 )
 
 
@@ -29,7 +29,7 @@ def artists_page(
     )
     return base_layout(
         page_container(
-            stack_section(
+            content_stack(
                 page_title(
                     ARTISTS_TITLE,
                 ),
@@ -39,7 +39,6 @@ def artists_page(
                         for artist in artists
                     ],
                 ),
-                align="stretch",
             )
         )
     )

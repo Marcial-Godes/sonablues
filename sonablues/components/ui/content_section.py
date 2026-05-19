@@ -1,11 +1,8 @@
 import reflex as rx
 
-from sonablues.components.ui.section_header import (
+from sonablues.components.ui import (
     section_header,
-)
-
-from sonablues.components.ui.stacks import (
-    stack_section,
+    content_stack,
 )
 
 
@@ -15,12 +12,11 @@ def content_section(
     *children,
     **props,
 ) -> rx.Component:
-    return stack_section(
+    return content_stack(
         section_header(
             title,
             description,
         ),
         *children,
-        width="100%",
         **props,
     )

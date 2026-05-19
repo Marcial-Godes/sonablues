@@ -76,13 +76,10 @@ def mobile_menu(
                         ),
                     ),
                 ),
-
                 spacing=NAVBAR_SECTION_GAP,
                 padding=NAVBAR_DRAWER_PADDING,
             ),
-
             background_color=CARD_COLOR,
         ),
-
         direction="right",
     )

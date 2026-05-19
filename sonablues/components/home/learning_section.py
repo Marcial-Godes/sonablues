@@ -6,7 +6,7 @@ from sonablues.components.ui import (
     secondary_text,
     responsive_grid,
     stack_start,
-    stack_section,
+    content_stack,
 )
 from sonablues.styles.tokens import (
     LEARNING_ICON_SIZE,
@@ -41,13 +41,12 @@ def learning_card(
             spacing=CONTENT_GAP,
         ),
         padding=CARD_PADDING,
-        width="100%",
         hoverable=True,
     )
 
 
 def learning_section() -> rx.Component:
-    return stack_section(
+    return content_stack(
         section_header(
             "Aprende guitarra de forma práctica",
             "Canciones, riffs y técnicas explicadas paso a paso.",

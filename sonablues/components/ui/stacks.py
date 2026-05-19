@@ -1,4 +1,5 @@
 import reflex as rx
+
 from sonablues.styles.tokens import (
     CONTENT_GAP,
     SECTION_GAP,
@@ -10,34 +11,24 @@ def stack_start(
     spacing=CONTENT_GAP,
     **props,
 ) -> rx.Component:
-    default_props = {
-        "spacing": spacing,
-        "align": "start",
-        "width": "100%",
-    }
     return rx.vstack(
         *children,
-        **{
-            **default_props,
-            **props,
-        },
+        spacing=spacing,
+        align=props.pop("align", "start"),
+        width=props.pop("width", "100%"),
+        **props,
     )
 
 
-def stack_section(
+def content_stack(
     *children,
     spacing=SECTION_GAP,
     **props,
 ) -> rx.Component:
-    default_props = {
-        "spacing": spacing,
-        "align": "stretch",
-        "width": "100%",
-    }
     return rx.vstack(
         *children,
-        **{
-            **default_props,
-            **props,
-        },
+        spacing=spacing,
+        align=props.pop("align", "stretch"),
+        width=props.pop("width", "100%"),
+        **props,
     )

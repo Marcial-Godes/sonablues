@@ -6,7 +6,7 @@ from sonablues.components.song import (
 )
 from sonablues.components.ui import (
     favorite_button,
-    stack_section,
+    content_stack,
 )
 from sonablues.styles.tokens import (
     PAGE_GAP,
@@ -14,14 +14,10 @@ from sonablues.styles.tokens import (
 
 
 def song_content(song: Song) -> rx.Component:
-    return stack_section(
+    return content_stack(
         favorite_button(
             song.slug,
         ),
-
         song_video_section(song),
-
         planned_content(),
-
-        spacing=PAGE_GAP,
     )

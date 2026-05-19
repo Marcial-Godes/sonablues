@@ -70,6 +70,7 @@ C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\empty_state.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\favorite_button.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\media_card.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\muted_text.py
+C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\page_header.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\page_title.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\responsive_grid.py
 C:\Users\mazin\Desktop\Python\sonablues\sonablues\components\ui\section_header.py

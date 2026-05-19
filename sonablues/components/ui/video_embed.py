@@ -1,18 +1,16 @@
 import reflex as rx
 
-from sonablues.styles.tokens import (
-    CARD_RADIUS,
-)
 
-
-def video_embed(
-    src: str,
-    aspect_ratio: str = "56.25%",
-    **props,
-) -> rx.Component:
-    return rx.box(
-        rx.html(
-            f"""
+def video_embed(src: str) -> rx.Component:
+    return rx.html(
+        f"""
+        <div style="
+            position:relative;
+            width:100%;
+            padding-top:56.25%;
+            overflow:hidden;
+            border-radius:16px;
+        ">
             <iframe
                 src="{src}"
                 title="YouTube video player"
@@ -25,15 +23,8 @@ def video_embed(
                     width:100%;
                     height:100%;
                     border:none;
-                    border-radius:{CARD_RADIUS};
                 "
             ></iframe>
-            """
-        ),
-        position="relative",
-        width="100%",
-        padding_top=aspect_ratio,
-        overflow="hidden",
-        border_radius=CARD_RADIUS,
-        **props,
+        </div>
+        """
     )

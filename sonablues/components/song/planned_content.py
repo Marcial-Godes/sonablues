@@ -29,6 +29,7 @@ def planned_content() -> rx.Component:
             ),
             width="100%",
             padding=CARD_PADDING,
+            min_height="unset",
         ),
     )
     

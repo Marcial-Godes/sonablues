@@ -31,7 +31,6 @@ def surface(
         "border": CARD_BORDER,
         "border_radius": CARD_RADIUS,
         "padding": padding,
-        "min_height": CARD_MIN_HEIGHT,
         "transition": CARD_TRANSITION,
         "_hover": hover_styles,
     }

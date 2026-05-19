@@ -13,7 +13,6 @@ from sonablues.components.ui import (
     favorite_button,
     card_link,
     stack_start,
-    stack_section,
     title_text,
 )
 from sonablues.styles.tokens import (
@@ -28,43 +27,59 @@ from sonablues.styles.tokens import (
 def song_card(
     song: Song,
 ) -> rx.Component:
-    return stack_section(
+    return rx.box(
         card_link(
             media_card(
+                rx.box(
+                    favorite_button(
+                        song.slug,
+                        compact=True,
+                    ),
+                    position="absolute",
+                    top="16px",
+                    right="16px",
+                    z_index="10",
+                ),
+
                 cover_image(
                     src=song.image,
                     height=CARD_IMAGE_HEIGHT_MD,
                 ),
+
                 stack_start(
                     title_text(
                         song.title,
                         size=TITLE_SIZE_CARD,
                     ),
+
                     rx.hstack(
                         app_badge(
                             song.difficulty,
                             variant="difficulty",
                         ),
+
                         app_badge(
                             song.tuning,
                         ),
+
                         spacing=INLINE_GAP,
                         wrap="wrap",
                     ),
+
                     badge_group(
                         song.techniques,
                         size="1",
                     ),
+
                     spacing=CONTENT_GAP,
                 ),
+
                 min_height=SONG_CARD_MIN_HEIGHT,
+                position="relative",
             ),
+
             href=song_detail_route(
                 song.slug,
             ),
         ),
-        favorite_button(
-            song.slug,
-        ),
-        spacing=CONTENT_GAP,
     )

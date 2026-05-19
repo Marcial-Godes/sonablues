@@ -12,12 +12,10 @@ from sonablues.components.search import (
     song_search_input,
 )
 from sonablues.components.ui import (
-    page_title,
     empty_state,
-    secondary_text,
     responsive_grid,
-    stack_start,
     stack_section,
+    page_header,
 )
 from sonablues.services.song_service import (
     get_songs_by_artist,
@@ -43,13 +41,9 @@ def songs_page(
     return base_layout(
         page_container(
             stack_section(
-                stack_start(
-                    page_title(
-                        artist.name,
-                    ),
-                    secondary_text(
-                        artist.description,
-                    ),
+                page_header(
+                    title=artist.name,
+                    description=artist.description,
                 ),
                 song_search_input(),
                 responsive_grid(

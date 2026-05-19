@@ -31,7 +31,7 @@ def stack_section(
 ) -> rx.Component:
     default_props = {
         "spacing": spacing,
-        "align": "start",
+        "align": "stretch",
         "width": "100%",
     }
     return rx.vstack(

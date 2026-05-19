@@ -5,6 +5,9 @@ from sonablues.constants import (
 from sonablues.components.base_layout import (
     base_layout,
 )
+from sonablues.components.layout import (
+    content_container,
+)
 from sonablues.components.song import (
     song_hero,
     song_content,
@@ -14,6 +17,9 @@ from sonablues.components.ui import (
 )
 from sonablues.services import (
     get_song,
+)
+from sonablues.styles.tokens import (
+    PAGE_GAP,
 )
 
 
@@ -31,11 +37,15 @@ def song_detail_page(
                 ),
             )
         )
+
     return base_layout(
-        rx.vstack(
-            song_hero(song),
-            song_content(song),
-            width="100%",
+        content_container(
+            rx.vstack(
+                song_hero(song),
+                song_content(song),
+                width="100%",
+                spacing=PAGE_GAP,
+                align="start",
+            ),
         )
     )
-    

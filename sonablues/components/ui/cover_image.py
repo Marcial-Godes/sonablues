@@ -1,4 +1,5 @@
 import reflex as rx
+
 from sonablues.styles.tokens import (
     CARD_RADIUS,
 )
@@ -6,10 +7,11 @@ from sonablues.styles.tokens import (
 
 def cover_image(
     src: str,
-    height,
+    height: str,
     object_position: str = "center",
     **props,
 ) -> rx.Component:
+
     return rx.image(
         src=src,
         loading="lazy",
@@ -18,5 +20,7 @@ def cover_image(
         object_fit="cover",
         object_position=object_position,
         border_radius=CARD_RADIUS,
+        display="block",
+        flex_shrink="0",
         **props,
     )

@@ -7,9 +7,11 @@ CARD_HOVER_TRANSFORM = "translateY(-4px)"
 # =========================
 # Layout
 # =========================
-SECTION_MAX_WIDTH = "720px"
+SECTION_MAX_WIDTH = "960px"
 SECTION_TEXT_WIDTH = "42ch"
-CONTENT_MAX_WIDTH = "900px"
+CONTENT_MAX_WIDTH = "1200px"
+MEDIA_MAX_WIDTH = "860px"
+CARD_MAX_WIDTH = "980px"
 PAGE_PADDING_X = {
     "base": "1rem",
     "md": "2rem",
@@ -87,7 +89,9 @@ TEXT_SIZE_BODY = "4"
 TEXT_SIZE_SECONDARY = "3"
 TEXT_SIZE_SMALL = "2"
 
-BADGE_SIZE = "3"
+BADGE_SIZE_SMALL = "1"
+BADGE_SIZE_DEFAULT = "2"
+BADGE_SIZE_LARGE = "3"
 
 
 # =========================
@@ -98,10 +102,13 @@ CARD_PADDING = {
     "md": "1.25rem",
     "lg": "1.5rem",
 }
-CARD_RADIUS = "24px"
-CARD_MIN_HEIGHT = {
-    "base": "100%",
+CARD_PADDING_COMPACT = {
+    "base": "0.5rem",
+    "md": "0.75rem",
 }
+CARD_RADIUS = "24px"
+MEDIA_RADIUS = "16px"
+CARD_MIN_HEIGHT = "unset"
 CARD_BORDER = "1px solid rgba(143,163,184,0.22)"
 CARD_BACKGROUND = "rgba(37,48,62,0.92)"
 
@@ -134,8 +141,8 @@ CARD_IMAGE_HEIGHT_HERO = {
 # =========================
 SONG_HERO_IMAGE_HEIGHT = {
     "base": "220px",
-    "md": "300px",
-    "lg": "360px",
+    "md": "320px",
+    "lg": "420px",
 }
 SONG_CARD_MIN_HEIGHT = {
     "base": "520px",
@@ -220,3 +227,25 @@ NAVBAR_DRAWER_PADDING = {
     "base": "1.5rem",
     "md": "2rem",
 }
+
+
+FONT_WEIGHT_NORMAL = "400"
+FONT_WEIGHT_MEDIUM = "500"
+FONT_WEIGHT_SEMIBOLD = "600"
+FONT_WEIGHT_BOLD = "700"
+
+LETTER_SPACING_TIGHT = "-0.01em"
+LETTER_SPACING_NORMAL = "0"
+
+LINE_HEIGHT_COMPACT = "1.2"
+LINE_HEIGHT_NORMAL = "1.5"
+BADGE_RADIUS = "full"
+
+# =========================
+# Typography Layout
+# =========================
+
+TEXT_BLOCK_SPACING = "0.35rem"
+TEXT_INLINE_PADDING = "0.35rem"
+SECTION_BLOCK_SPACING = "1.5rem"
+COMPACT_STACK_SPACING = "1"

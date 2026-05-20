@@ -9,9 +9,11 @@ from sonablues.components.layout import (
     content_container,
 )
 from sonablues.components.song import (
-    song_hero,
     song_content,
+)
+from sonablues.components.song.sections import (
     practice_tips_section,
+    song_hero,
 )
 from sonablues.components.ui import (
     empty_state,

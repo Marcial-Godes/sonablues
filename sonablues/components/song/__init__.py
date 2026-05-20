@@ -1,9 +1,10 @@
-from .hero import song_hero
-from .video_section import song_video_section
-from .planned_content import planned_content
-from .content.song_content import (
+from .content import (
     song_content,
 )
-from .practice_tips_section import (
+
+from .sections import (
+    planned_content,
     practice_tips_section,
+    song_hero,
+    song_video_section,
 )

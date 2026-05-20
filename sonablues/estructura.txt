@@ -220,13 +220,3 @@ https://github.com/Marcial-Godes/sonablues/tree/main/sonablues/states
 https://github.com/Marcial-Godes/sonablues/tree/main/sonablues/styles
 https://github.com/Marcial-Godes/sonablues/tree/main/sonablues/utils
 
-
-content_card.py x
-content_list.py x
-content_section.py x
-media_container.py x
-section_card.py x
-section_header.py x
-section_row.py x
-stacks.py
-page_header.py

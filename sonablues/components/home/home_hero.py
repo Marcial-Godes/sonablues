@@ -21,7 +21,7 @@ from sonablues.styles.tokens import (
     HOME_HERO_TEXT_MIN_WIDTH,
     SECTION_GAP,
 )
-from sonablues.components.ui.primitives.cover_image import (
+from sonablues.components.ui import (
     cover_image,
 )
 

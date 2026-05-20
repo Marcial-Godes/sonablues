@@ -4,7 +4,7 @@ from ..primitives.page_title import (
     page_title,
 )
 
-from sonablues.components.ui.text import (
+from ..text import (
     secondary_text,
 )
 

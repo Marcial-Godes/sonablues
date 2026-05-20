@@ -2,20 +2,16 @@ import reflex as rx
 from sonablues.components.base_layout import (
     base_layout,
 )
-from sonablues.components.home.home_hero import (
-    home_hero,
-)
-from sonablues.components.home.learning_section import (
-    learning_section,
-)
-from sonablues.components.home.featured_songs import (
-    featured_songs,
-)
 from sonablues.components.layout import (
     page_container,
 )
 from sonablues.components.ui.layout import (
     content_stack,
+)
+from sonablues.components.home.ui import (
+    featured_songs,
+    home_hero,
+    learning_section,
 )
 
 

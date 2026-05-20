@@ -1,6 +1,6 @@
 import reflex as rx
 
-from sonablues.components.navbar import navbar
+from sonablues.components.navbar.ui import navbar
 from sonablues.components.footer import footer
 from sonablues.styles.theme import base_style
 

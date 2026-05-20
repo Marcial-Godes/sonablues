@@ -1,4 +1,4 @@
-from sonablues.components.ui.text import (
+from .text import (
     secondary_text,
 )
 

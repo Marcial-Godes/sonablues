@@ -4,7 +4,7 @@ from sonablues.services.song_service import (
     get_featured_songs,
 )
 
-from sonablues.components.cards import (
+from sonablues.components.cards.ui import (
     featured_song_card,
 )
 

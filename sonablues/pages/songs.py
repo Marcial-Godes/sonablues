@@ -5,7 +5,7 @@ from sonablues.components.base_layout import (
 from sonablues.components.layout import (
     page_container,
 )
-from sonablues.components.cards.song_card import (
+from sonablues.components.cards.ui import (
     song_card,
 )
 from sonablues.components.search import (

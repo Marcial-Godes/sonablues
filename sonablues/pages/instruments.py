@@ -10,13 +10,14 @@ from sonablues.components.cards import (
 )
 from sonablues.components.ui import (
     responsive_grid,
-    content_stack,
     title_text,
     secondary_text,
 )
+from sonablues.components.ui.layout import (
+    content_stack,
+)
 from sonablues.styles.tokens import (
     TITLE_SIZE_PAGE,
-    SECTION_GAP,
 )
 
 

@@ -190,3 +190,43 @@ vintage guitar
 moody guitar
 guitar close up
 blues stage
+
+
+
+Repo:
+https://github.com/Marcial-Godes/sonablues
+https://github.com/Marcial-Godes/sonablues/tree/main/assets
+https://github.com/Marcial-Godes/sonablues/tree/main/assets/icons
+https://github.com/Marcial-Godes/sonablues/tree/main/assets/images
+https://github.com/Marcial-Godes/sonablues/tree/main/sonablues
+https://github.com/Marcial-Godes/sonablues/tree/main/sonablues/components
+https://github.com/Marcial-Godes/sonablues/tree/main/sonablues/components/cards
+https://github.com/Marcial-Godes/sonablues/tree/main/sonablues/components/home
+https://github.com/Marcial-Godes/sonablues/tree/main/sonablues/components/layout
+https://github.com/Marcial-Godes/sonablues/tree/main/sonablues/components/navbar
+https://github.com/Marcial-Godes/sonablues/tree/main/sonablues/components/search
+https://github.com/Marcial-Godes/sonablues/tree/main/sonablues/components/song
+https://github.com/Marcial-Godes/sonablues/tree/main/sonablues/components/ui
+https://github.com/Marcial-Godes/sonablues/tree/main/sonablues/components/ui/text
+https://github.com/Marcial-Godes/sonablues/tree/main/sonablues/data
+https://github.com/Marcial-Godes/sonablues/tree/main/sonablues/data/mock
+https://github.com/Marcial-Godes/sonablues/tree/main/sonablues/data/models
+https://github.com/Marcial-Godes/sonablues/tree/main/sonablues/database
+https://github.com/Marcial-Godes/sonablues/tree/main/sonablues/models
+https://github.com/Marcial-Godes/sonablues/tree/main/sonablues/pages
+https://github.com/Marcial-Godes/sonablues/tree/main/sonablues/routes
+https://github.com/Marcial-Godes/sonablues/tree/main/sonablues/services
+https://github.com/Marcial-Godes/sonablues/tree/main/sonablues/states
+https://github.com/Marcial-Godes/sonablues/tree/main/sonablues/styles
+https://github.com/Marcial-Godes/sonablues/tree/main/sonablues/utils
+
+
+content_card.py x
+content_list.py x
+content_section.py x
+media_container.py x
+section_card.py x
+section_header.py x
+section_row.py x
+stacks.py
+page_header.py

@@ -1,12 +1,9 @@
 import reflex as rx
-
 from sonablues.constants import (
     ELECTRIC,
     ACOUSTIC,
 )
-
 from sonablues.data.mock.songs_data import SONGS
-
 from sonablues.routes import (
     HOME_ROUTE,
     LOGIN_ROUTE,
@@ -19,7 +16,6 @@ from sonablues.routes import (
     songs_route,
     song_detail_route,
 )
-
 from sonablues.pages.home import home_page
 from sonablues.pages.login import login_page
 from sonablues.pages.register import register_page

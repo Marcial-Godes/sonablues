@@ -6,11 +6,12 @@ from sonablues.components.ui import (
     badge_group,
     cover_image,
     app_badge,
+)
+from sonablues.components.ui.layout import (
     stack_start,
     content_stack,
 )
 from sonablues.styles.tokens import (
-    SONG_HERO_IMAGE_HEIGHT,
     BADGE_SIZE_DEFAULT,
     TEXT_SIZE_BODY,
     INLINE_GAP,

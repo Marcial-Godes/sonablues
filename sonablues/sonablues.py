@@ -1,5 +1,4 @@
 import reflex as rx
-
 from sonablues.app_pages import register_pages
 
 

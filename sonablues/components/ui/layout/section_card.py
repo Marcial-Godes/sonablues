@@ -1,11 +1,12 @@
 import reflex as rx
 
-from sonablues.components.ui import (
-    content_card,
-    stack_start,
+from .section_row import (
     section_row,
 )
-
+from ..layout import (
+    stack_start,
+    content_card,
+)
 from sonablues.styles.tokens import (
     CONTENT_GAP,
 )

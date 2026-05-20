@@ -2,7 +2,7 @@ import reflex as rx
 from sonablues.components.ui.surface import (
     surface,
 )
-from sonablues.components.ui.stacks import (
+from sonablues.components.ui.layout import (
     content_stack,
 )
 

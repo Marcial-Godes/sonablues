@@ -1,9 +1,9 @@
 import reflex as rx
-from .text import (
+from ..text import (
     title_text,
     secondary_text,
 )
-from .stacks import (
+from ..layout import (
     stack_start,
 )
 from sonablues.styles.tokens import (

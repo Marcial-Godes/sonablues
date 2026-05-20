@@ -17,6 +17,8 @@ from sonablues.services.artist_service import (
 from sonablues.components.ui import (
     page_title,
     responsive_grid,
+)
+from sonablues.components.ui.layout import (
     content_stack,
 )
 

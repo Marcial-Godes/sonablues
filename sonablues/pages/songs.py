@@ -14,8 +14,10 @@ from sonablues.components.search import (
 from sonablues.components.ui import (
     empty_state,
     responsive_grid,
-    content_stack,
     page_header,
+)
+from sonablues.components.ui.layout import (
+    content_stack,
 )
 from sonablues.services.song_service import (
     get_songs_by_artist,

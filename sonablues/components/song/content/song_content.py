@@ -6,10 +6,9 @@ from sonablues.components.song import (
 )
 from sonablues.components.ui import (
     favorite_button,
-    content_stack,
 )
-from sonablues.styles.tokens import (
-    PAGE_GAP,
+from sonablues.components.ui.layout import (
+    content_stack,
 )
 
 

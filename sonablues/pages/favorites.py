@@ -18,6 +18,8 @@ from sonablues.components.ui import (
     page_title,
     empty_state,
     responsive_grid,
+)
+from sonablues.components.ui.layout import (
     content_stack,
 )
 

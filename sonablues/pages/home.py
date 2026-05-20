@@ -14,7 +14,7 @@ from sonablues.components.home.featured_songs import (
 from sonablues.components.layout import (
     page_container,
 )
-from sonablues.components.ui import (
+from sonablues.components.ui.layout import (
     content_stack,
 )
 

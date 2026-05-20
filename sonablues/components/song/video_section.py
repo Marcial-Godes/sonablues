@@ -4,10 +4,10 @@ from sonablues.constants import (
 )
 from sonablues.data.models.song_model import Song
 from sonablues.components.ui import (
-    content_section,
     video_embed,
     media_container,
     section_card,
+    content_section,
 )
 from sonablues.utils.youtube import (
     youtube_embed_url,

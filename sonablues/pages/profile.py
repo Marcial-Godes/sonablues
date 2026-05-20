@@ -9,11 +9,13 @@ from sonablues.components.ui import (
     page_title,
     secondary_text,
     surface,
-    stack_start,
-    content_stack,
     title_text,
     body_text,
     label_text,
+)
+from sonablues.components.ui.layout import (
+    stack_start,
+    content_stack,
 )
 from sonablues.states.auth_state import (
     AuthState,

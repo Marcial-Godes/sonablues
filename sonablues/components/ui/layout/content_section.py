@@ -1,7 +1,8 @@
 import reflex as rx
-
-from sonablues.components.ui import (
+from .section_header import (
     section_header,
+)
+from .stacks import (
     content_stack,
 )
 

@@ -1,8 +1,10 @@
 import reflex as rx
 
 from sonablues.components.ui import (
-    content_section,
     section_card,
+    content_section,
+)
+from sonablues.components.ui.layout import (
     content_list,
 )
 

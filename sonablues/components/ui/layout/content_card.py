@@ -1,6 +1,6 @@
 import reflex as rx
 
-from ..surface import (
+from ..primitives.surface import (
     surface,
 )
 

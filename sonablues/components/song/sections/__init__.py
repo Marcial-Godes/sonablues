@@ -1,4 +1,4 @@
-from .hero import (
+from .song_hero  import (
     song_hero,
 )
 

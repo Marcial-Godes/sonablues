@@ -1,5 +1,5 @@
 import reflex as rx
-from sonablues.components.ui.app_badge import (
+from sonablues.components.ui.primitives.app_badge import (
     app_badge,
 )
 from sonablues.styles.tokens import (

@@ -11,7 +11,7 @@ from sonablues.components.layout import (
 from sonablues.components.song import (
     song_content,
 )
-from sonablues.components.song.sections import (
+from sonablues.components.song.ui import (
     practice_tips_section,
     song_hero,
 )

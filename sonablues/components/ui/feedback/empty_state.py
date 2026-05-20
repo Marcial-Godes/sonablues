@@ -1,6 +1,6 @@
 import reflex as rx
 
-from sonablues.components.ui.page_title import (
+from ..primitives.page_title import (
     page_title,
 )
 

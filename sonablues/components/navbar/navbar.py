@@ -13,7 +13,7 @@ from sonablues.styles.tokens import (
     NAVBAR_PADDING_X,
     NAVBAR_PADDING_Y,
 )
-from sonablues.components.ui import (
+from sonablues.components.ui.text import (
     title_text,
 )
 from .desktop_navigation import (

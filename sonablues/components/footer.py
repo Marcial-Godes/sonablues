@@ -6,11 +6,7 @@ from sonablues.styles.theme import (
 from sonablues.components.ui.layout import (
     stack_start,
 )
-from sonablues.components.ui import (
-    label_text,
-    caption_text,
-)
-from sonablues.components.ui import (
+from sonablues.components.ui.text import (
     label_text,
     caption_text,
 )

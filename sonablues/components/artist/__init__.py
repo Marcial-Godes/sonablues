@@ -1,0 +1,1 @@
+# Artist domain package.

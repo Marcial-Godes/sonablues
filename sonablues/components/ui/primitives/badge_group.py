@@ -1,7 +1,9 @@
 import reflex as rx
-from .app_badge import (
-    app_badge,
+
+from .badge import (
+    tag_badge,
 )
+
 from sonablues.styles.tokens import (
     INLINE_GAP,
 )
@@ -14,9 +16,8 @@ def badge_group(
     return rx.flex(
         rx.foreach(
             items,
-            lambda item: app_badge(
+            lambda item: tag_badge(
                 item,
-                variant="tag",
                 size=size,
             ),
         ),

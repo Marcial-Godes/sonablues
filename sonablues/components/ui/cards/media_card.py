@@ -1,16 +1,18 @@
 import reflex as rx
-from sonablues.components.ui import (
-    surface,
-)
+
 from sonablues.components.ui.layout import (
     content_stack,
 )
 
+from sonablues.components.ui.primitives import (
+    surface,
+)
+
 
 def media_card(
-    media,
+    media: rx.Component,
     *content,
-    spacing=None,
+    spacing: str | None = None,
     hoverable: bool = True,
     **props,
 ) -> rx.Component:
@@ -21,5 +23,6 @@ def media_card(
             spacing=spacing,
         ),
         hoverable=hoverable,
+        overflow="hidden",
         **props,
     )

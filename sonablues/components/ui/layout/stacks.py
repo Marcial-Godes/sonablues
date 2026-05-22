@@ -9,13 +9,15 @@ from sonablues.styles.tokens import (
 def stack_start(
     *children,
     spacing=CONTENT_GAP,
+    align: str = "start",
+    width: str = "100%",
     **props,
 ) -> rx.Component:
     return rx.vstack(
         *children,
         spacing=spacing,
-        align=props.pop("align", "start"),
-        width=props.pop("width", "100%"),
+        align=align,
+        width=width,
         **props,
     )
 
@@ -23,12 +25,14 @@ def stack_start(
 def content_stack(
     *children,
     spacing=SECTION_GAP,
+    align: str = "stretch",
+    width: str = "100%",
     **props,
 ) -> rx.Component:
     return rx.vstack(
         *children,
         spacing=spacing,
-        align=props.pop("align", "stretch"),
-        width=props.pop("width", "100%"),
+        align=align,
+        width=width,
         **props,
     )

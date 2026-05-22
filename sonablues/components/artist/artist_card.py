@@ -5,12 +5,16 @@ from sonablues.data.models.artist_model import (
 from sonablues.routes import (
     songs_route,
 )
-from sonablues.components.ui import (
-    media_card,
-    cover_image,
-    card_link,
-    title_text,
+from sonablues.components.ui.text import (
     secondary_text,
+    title_text,
+)
+
+from sonablues.components.ui.navigation.card_link import card_link
+from sonablues.components.ui.media.cover_image import cover_image
+
+from sonablues.components.ui.cards import (
+    media_card,
 )
 from sonablues.components.ui.layout import (
     stack_start,

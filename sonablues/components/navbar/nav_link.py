@@ -9,7 +9,7 @@ from sonablues.styles.transitions import (
     CARD_TRANSITION,
 )
 
-from sonablues.components.ui import (
+from sonablues.components.ui.text import (
     label_text,
 )
 

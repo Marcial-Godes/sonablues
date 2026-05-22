@@ -5,14 +5,27 @@ from sonablues.routes.routes import (
 from sonablues.data.models.song_model import (
     Song,
 )
-from sonablues.components.ui import (
-    media_card,
-    cover_image,
-    badge_group,
-    app_badge,
-    favorite_button,
-    card_link,
+from sonablues.components.ui.text import (
     title_text,
+)
+
+from sonablues.components.ui.primitives.badge import badge
+from sonablues.components.ui.navigation.card_link import card_link
+from sonablues.components.ui.media.cover_image import cover_image
+
+from sonablues.components.song.favorite_button import (
+    favorite_button,
+)
+
+from sonablues.components.song.difficulty_badge import (
+    difficulty_badge,
+)
+
+from sonablues.components.ui.primitives import (
+    badge_group,
+)
+from sonablues.components.ui.cards import (
+    media_card,
 )
 from sonablues.components.ui.layout import (
     stack_start,
@@ -55,12 +68,11 @@ def song_card(
                     ),
 
                     rx.hstack(
-                        app_badge(
+                        difficulty_badge(
                             song.difficulty,
-                            variant="difficulty",
                         ),
 
-                        app_badge(
+                        badge(
                             song.tuning,
                         ),
 

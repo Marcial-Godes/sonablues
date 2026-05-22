@@ -4,20 +4,14 @@ import reflex as rx
 def card_link(
     *children,
     href: str,
+    width: str = "100%",
     **props,
 ) -> rx.Component:
-
     return rx.link(
-
         *children,
-
         href=href,
-
-        width="100%",
-
+        width=width,
         text_decoration="none",
-
         display="block",
-
         **props,
     )

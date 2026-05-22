@@ -1,8 +1,14 @@
 import reflex as rx
 
-from sonablues.components.ui import (
-    card_link,
+from sonablues.components.ui.primitives import (
     surface,
+)
+
+from sonablues.components.ui.navigation import (
+    card_link,
+)
+
+from sonablues.components.ui.text import (
     title_text,
     secondary_text,
 )

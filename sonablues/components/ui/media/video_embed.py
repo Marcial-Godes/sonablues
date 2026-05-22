@@ -1,15 +1,22 @@
 import reflex as rx
 
 
-def video_embed(src: str) -> rx.Component:
+VIDEO_ASPECT_RATIO = "56.25%"
+
+
+def video_embed(
+    src: str,
+    aspect_ratio: str = VIDEO_ASPECT_RATIO,
+    radius: str = "16px",
+) -> rx.Component:
     return rx.html(
         f"""
         <div style="
             position:relative;
             width:100%;
-            padding-top:56.25%;
+            padding-top:{aspect_ratio};
             overflow:hidden;
-            border-radius:16px;
+            border-radius:{radius};
         ">
             <iframe
                 src="{src}"

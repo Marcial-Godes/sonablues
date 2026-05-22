@@ -1,6 +1,6 @@
 import reflex as rx
 
-from ..primitives.surface import (
+from sonablues.components.ui.primitives import (
     surface,
 )
 
@@ -12,14 +12,15 @@ from sonablues.styles.tokens import (
 
 def content_card(
     *children,
+    padding: str = CARD_PADDING_COMPACT,
+    max_width: str = CARD_MAX_WIDTH,
     **props,
 ) -> rx.Component:
     return surface(
         *children,
         width="100%",
-        max_width=CARD_MAX_WIDTH,
+        max_width=max_width,
         margin="0 auto",
-        overflow="hidden",
-        padding=CARD_PADDING_COMPACT,
+        padding=padding,
         **props,
     )

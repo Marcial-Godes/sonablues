@@ -1,10 +1,10 @@
 import reflex as rx
 from sonablues.data.models.song_model import Song
-from sonablues.components.song.ui import (
+from sonablues.components.song.sections import (
     planned_content,
     song_video_section,
 )
-from sonablues.components.ui import (
+from sonablues.components.song import (
     favorite_button,
 )
 from sonablues.components.ui.layout import (

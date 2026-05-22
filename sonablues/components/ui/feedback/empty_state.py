@@ -1,6 +1,6 @@
 import reflex as rx
 
-from ..primitives.page_title import (
+from ..text import (
     page_title,
 )
 

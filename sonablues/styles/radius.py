@@ -1,5 +1,9 @@
 INPUT_RADIUS = "14px"
+
 CARD_RADIUS = "20px"
+
 IMAGE_RADIUS = "18px"
-BADGE_RADIUS = "8px"
+
+BADGE_RADIUS = "full" #"8px"
+
 BUTTON_RADIUS = "10px"

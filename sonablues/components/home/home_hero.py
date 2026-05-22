@@ -1,12 +1,14 @@
 import reflex as rx
-from sonablues.components.ui import (
-    app_button,
+
+from sonablues.components.ui.navigation.app_button import app_button
+from sonablues.components.ui.layout import stack_start
+from sonablues.components.ui.media.cover_image import cover_image
+
+from sonablues.components.ui.text import (
     secondary_text,
-    title_text,
+    display_title,
 )
-from sonablues.components.ui.layout import (
-    stack_start,
-)
+
 from sonablues.routes import (
     ELECTRIC_ARTISTS_ROUTE,
     PROFILE_ROUTE,
@@ -21,9 +23,6 @@ from sonablues.styles.tokens import (
     HOME_HERO_TEXT_MIN_WIDTH,
     SECTION_GAP,
 )
-from sonablues.components.ui import (
-    cover_image,
-)
 
 
 def hero_text() -> rx.Component:
@@ -33,13 +32,8 @@ def hero_text() -> rx.Component:
             color_scheme="blue",
             size="2",
         ),
-        title_text(
+        display_title(
             "Sonablues",
-            size={
-                "base": "7",
-                "sm": "8",
-                "lg": "9",
-            },
             line_height="1",
         ),
         secondary_text(

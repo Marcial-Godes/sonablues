@@ -85,6 +85,21 @@ TITLE_SIZE_HERO = {
     "lg": "9",
 }
 
+DISPLAY_TITLE_SIZE = {
+    "base": "8",
+    "md": "9",
+}
+
+SECTION_TITLE_SIZE = {
+    "base": "6",
+    "md": "7",
+}
+
+CARD_TITLE_SIZE = {
+    "base": "4",
+    "md": "5",
+}
+
 TEXT_SIZE_BODY = "4"
 TEXT_SIZE_SECONDARY = "3"
 TEXT_SIZE_SMALL = "2"
@@ -106,7 +121,6 @@ CARD_PADDING_COMPACT = {
     "base": "0.5rem",
     "md": "0.75rem",
 }
-CARD_RADIUS = "24px"
 MEDIA_RADIUS = "16px"
 CARD_MIN_HEIGHT = "unset"
 CARD_BORDER = "1px solid rgba(143,163,184,0.22)"
@@ -239,7 +253,6 @@ LETTER_SPACING_NORMAL = "0"
 
 LINE_HEIGHT_COMPACT = "1.2"
 LINE_HEIGHT_NORMAL = "1.5"
-BADGE_RADIUS = "full"
 
 # =========================
 # Typography Layout

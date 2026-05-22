@@ -1,14 +1,20 @@
 import reflex as rx
-from sonablues.components.ui import (
-    section_header,
-    surface,
-    title_text,
+from sonablues.components.ui.text import (
     secondary_text,
-    responsive_grid,
+)
+from sonablues.components.ui.sections import (
+    section_header,
+)
+from sonablues.components.ui.primitives import (
+    surface,
+)
+from sonablues.components.ui.text import (
+    title_text,
 )
 from sonablues.components.ui.layout import (
     stack_start,
     content_stack,
+    responsive_grid,
 )
 from sonablues.styles.tokens import (
     LEARNING_ICON_SIZE,

@@ -1,13 +1,13 @@
 import reflex as rx
 from ..text import (
-    title_text,
+    display_title,
     secondary_text,
 )
-from .stacks import (
+
+from sonablues.components.ui.layout import (
     stack_start,
 )
 from sonablues.styles.tokens import (
-    TITLE_SIZE_PAGE,
     SECTION_TEXT_WIDTH,
 )
 
@@ -18,9 +18,8 @@ def page_header(
     **props,
 ) -> rx.Component:
     return stack_start(
-        title_text(
+        display_title(
             title,
-            size=TITLE_SIZE_PAGE,
             text_align="center",
         ),
         rx.cond(

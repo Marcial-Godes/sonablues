@@ -1,15 +1,22 @@
 import reflex as rx
 from sonablues.data.models.song_model import Song
-from sonablues.components.ui import (
-    page_title,
+from sonablues.components.ui.text import (
     secondary_text,
+    page_title,
+)
+
+from sonablues.components.ui.primitives.badge import badge
+from sonablues.components.ui.media.cover_image import cover_image
+
+from sonablues.components.song.difficulty_badge import (
+    difficulty_badge,
+)
+from sonablues.components.ui.primitives import (
     badge_group,
-    cover_image,
-    app_badge,
 )
 from sonablues.components.ui.layout import (
-    stack_start,
     content_stack,
+    stack_start,
 )
 from sonablues.styles.tokens import (
     BADGE_SIZE_DEFAULT,
@@ -35,13 +42,12 @@ def song_hero(
             ),
 
             rx.hstack(
-                app_badge(
+                difficulty_badge(
                     song.difficulty,
-                    variant="difficulty",
                     size=BADGE_SIZE_DEFAULT,
                 ),
 
-                app_badge(
+                badge(
                     song.tuning,
                     size=BADGE_SIZE_DEFAULT,
                 ),

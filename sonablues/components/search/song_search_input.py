@@ -6,7 +6,6 @@ from sonablues.styles.theme import (
     CARD_COLOR,
     CARD_BORDER,
     TEXT_COLOR,
-    MUTED_TEXT,
     ACCENT_COLOR,
     ACCENT_BACKGROUND,
 )

@@ -1,43 +1,53 @@
 import reflex as rx
+
 from sonablues.styles.theme import (
     ACCENT_COLOR,
 )
+
 from sonablues.styles.transitions import (
     CARD_TRANSITION,
 )
+
 from sonablues.styles.tokens import (
     CARD_HOVER_TRANSFORM,
     CARD_PADDING,
-    CARD_RADIUS,
     CARD_BORDER,
     CARD_BACKGROUND,
-    CARD_MIN_HEIGHT,
 )
+
+from sonablues.styles.radius import (
+    CARD_RADIUS,
+)
+
 
 def surface(
     *children,
-    padding=CARD_PADDING,
+    padding: str = CARD_PADDING,
+    radius: str = CARD_RADIUS,
+    background: str = CARD_BACKGROUND,
+    border: str = CARD_BORDER,
     hoverable: bool = False,
+    hover_transform: str = CARD_HOVER_TRANSFORM,
+    transition: str = CARD_TRANSITION,
     **props,
 ) -> rx.Component:
-    hover_styles = {}
-    if hoverable:
-        hover_styles = {
-            "transform": CARD_HOVER_TRANSFORM,
+
+    hover_styles = (
+        {
+            "transform": hover_transform,
             "border": f"1px solid {ACCENT_COLOR}",
         }
-    default_props = {
-        "background": CARD_BACKGROUND,
-        "border": CARD_BORDER,
-        "border_radius": CARD_RADIUS,
-        "padding": padding,
-        "transition": CARD_TRANSITION,
-        "_hover": hover_styles,
-    }
+        if hoverable
+        else {}
+    )
+
     return rx.box(
         *children,
-        **{
-            **default_props,
-            **props,
-        },
+        background=background,
+        border=border,
+        border_radius=radius,
+        padding=padding,
+        transition=transition,
+        _hover=hover_styles,
+        **props,
     )
